@@ -1,0 +1,52 @@
+<?xml version='1.0'?>
+<ns2:test-suite xmlns:ns2='urn:model.allure.qatools.yandex.ru' start='1596178962923' stop='1596178973226'>
+    <name>Lineitem Creation</name>
+    <title>Lineitem Creation</title>
+    <test-cases>
+        <test-case start='1596178962925' status='failed' stop='1596178972642'>
+            <name>로그인 기능 확인 {"ID":"bradley.cho@buzzvil.com","Password":"@NGEqUCNt27jxPR"}</name>
+            <title>로그인 기능 확인 {"ID":"bradley.cho@buzzvil.com","Password":"@NGEqUCNt27jxPR"}</title>
+            <labels/>
+            <parameters/>
+            <steps>
+                <step start='1596178963678' status='failed' stop='1596178972642'>
+                    <name>Given Direct Sales 페이지로 이동 </name>
+                    <title>Given Direct Sales 페이지로 이동 </title>
+                    <attachments/>
+                    <steps>
+                        <step start='1596178963678' status='passed' stop='1596178967487'>
+                            <name>I am on page "https://dashboard-staging.buzzvil.com/campaign/direct_sales/ads/"</name>
+                            <title>I am on page "https://dashboard-staging.buzzvil.com/campaign/direct_sales/ads/"</title>
+                            <attachments/>
+                            <steps/>
+                        </step>
+                        <step start='1596178967488' status='failed' stop='1596178972642'>
+                            <name>StepProperity: name </name>
+                            <title>StepProperity: name </title>
+                            <attachments/>
+                            <steps>
+                                <step start='1596178967488' status='failed' stop='1596178972641'>
+                                    <name>I fill field "item_name", "CPC_Regression_Test"</name>
+                                    <title>I fill field "item_name", "CPC_Regression_Test"</title>
+                                    <attachments/>
+                                    <steps/>
+                                </step>
+                            </steps>
+                        </step>
+                    </steps>
+                </step>
+            </steps>
+            <attachments>
+                <attachment title='Last Seen Screenshot' source='c6233960-12f4-4c80-8d4e-55a206f64e01-attachment.png' type='image/png' size='10171'/>
+            </attachments>
+            <failure>
+                <message>Field "item_name" was not found by text|CSS|XPath</message>
+                <stack-trace>Error: Field "item_name" was not found by text|CSS|XPath
+                    at new ElementNotFound (C:\Users\Bradley.cho\AppData\Roaming\npm-cache\_npx\25072\node_modules\codeceptjs\lib\helper\errors\ElementNotFound.js:14:11)
+                    at assertElementExists (C:\Users\Bradley.cho\AppData\Roaming\npm-cache\_npx\25072\node_modules\codeceptjs\lib\helper\Puppeteer.js:2408:11)
+                    at Puppeteer.fillField (C:\Users\Bradley.cho\AppData\Roaming\npm-cache\_npx\25072\node_modules\codeceptjs\lib\helper\Puppeteer.js:1204:5)
+                    at processTicksAndRejections (internal/process/task_queues.js:97:5)</stack-trace>
+            </failure>
+        </test-case>
+    </test-cases>
+</ns2:test-suite>

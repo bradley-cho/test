@@ -1,0 +1,37 @@
+<?xml version='1.0'?>
+<ns2:test-suite xmlns:ns2='urn:model.allure.qatools.yandex.ru' start='1596179509346' stop='1596179514931'>
+    <name>Lineitem Creation</name>
+    <title>Lineitem Creation</title>
+    <test-cases>
+        <test-case start='1596179509350' status='failed' stop='1596179513863'>
+            <name>로그인 기능 확인 {"ID":"bradley.cho@buzzvil.com","Password":"@NGEqUCNt27jxPR"}</name>
+            <title>로그인 기능 확인 {"ID":"bradley.cho@buzzvil.com","Password":"@NGEqUCNt27jxPR"}</title>
+            <labels/>
+            <parameters/>
+            <steps>
+                <step start='1596179510081' status='failed' stop='1596179513863'>
+                    <name>Given Direct Sales 페이지로 이동 </name>
+                    <title>Given Direct Sales 페이지로 이동 </title>
+                    <attachments/>
+                    <steps>
+                        <step start='1596179510081' status='passed' stop='1596179513862'>
+                            <name>I am on page "https://dashboard-staging.buzzvil.com/campaign/direct_sales/ads/"</name>
+                            <title>I am on page "https://dashboard-staging.buzzvil.com/campaign/direct_sales/ads/"</title>
+                            <attachments/>
+                            <steps/>
+                        </step>
+                    </steps>
+                </step>
+            </steps>
+            <attachments>
+                <attachment title='Last Seen Screenshot' source='e3a6a0ce-b48c-4437-8df2-1d182c9ca5df-attachment.png' type='image/png' size='10171'/>
+            </attachments>
+            <failure>
+                <message>StepLogin.enterID is not a function</message>
+                <stack-trace>TypeError: StepLogin.enterID is not a function
+                    at C:\Users\Bradley.cho\Documents\GitHub\QA_Automation_Dash\exec3\step_definitions\DA_LineItemCreation_steps.js:14:13
+                    at runSteps (C:\Users\Bradley.cho\AppData\Roaming\npm-cache\_npx\1348\node_modules\codeceptjs\lib\interfaces\gherkin.js:49:15)</stack-trace>
+            </failure>
+        </test-case>
+    </test-cases>
+</ns2:test-suite>

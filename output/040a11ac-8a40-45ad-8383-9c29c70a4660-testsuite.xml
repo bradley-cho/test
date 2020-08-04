@@ -1,0 +1,15 @@
+<?xml version='1.0'?>
+<ns2:test-suite xmlns:ns2='urn:model.allure.qatools.yandex.ru' start='1596178616313' stop='1596178617229'>
+    <name>Lineitem Creation</name>
+    <title>Lineitem Creation</title>
+    <test-cases>
+        <test-case start='1596178616315' status='passed' stop='1596178616972'>
+            <name>로그인 기능 확인 {"Header 1":"Value 1","Header 2":"Value 2","Header 3":"Value 3"}</name>
+            <title>로그인 기능 확인 {"Header 1":"Value 1","Header 2":"Value 2","Header 3":"Value 3"}</title>
+            <labels/>
+            <parameters/>
+            <steps/>
+            <attachments/>
+        </test-case>
+    </test-cases>
+</ns2:test-suite>

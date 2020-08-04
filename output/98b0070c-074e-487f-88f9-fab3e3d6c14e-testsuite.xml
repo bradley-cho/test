@@ -1,0 +1,119 @@
+<?xml version='1.0'?>
+<ns2:test-suite xmlns:ns2='urn:model.allure.qatools.yandex.ru' start='1596434701352' stop='1596434711612'>
+    <name>Lineitem Creation</name>
+    <title>Lineitem Creation</title>
+    <test-cases>
+        <test-case start='1596434701360' status='failed' stop='1596434711015'>
+            <name>라인아이템 생성 확인 {"ID":"bradley.cho@buzzvil.com","Password":"@NGEqUCNt27jxPR"}</name>
+            <title>라인아이템 생성 확인 {"ID":"bradley.cho@buzzvil.com","Password":"@NGEqUCNt27jxPR"}</title>
+            <labels/>
+            <parameters/>
+            <steps>
+                <step start='1596434702093' status='passed' stop='1596434704736'>
+                    <name>Given Direct Sales 페이지로 이동 </name>
+                    <title>Given Direct Sales 페이지로 이동 </title>
+                    <attachments/>
+                    <steps>
+                        <step start='1596434702093' status='passed' stop='1596434704736'>
+                            <name>I am on page "https://dashboard-staging.buzzvil.com/campaign/direct_sales/ads/"</name>
+                            <title>I am on page "https://dashboard-staging.buzzvil.com/campaign/direct_sales/ads/"</title>
+                            <attachments/>
+                            <steps/>
+                        </step>
+                    </steps>
+                </step>
+                <step start='1596434704736' status='passed' stop='1596434705779'>
+                    <name>When ID 입력 </name>
+                    <title>When ID 입력 </title>
+                    <attachments/>
+                    <steps>
+                        <step start='1596434704736' status='passed' stop='1596434705779'>
+                            <name>StepLogin: enterId </name>
+                            <title>StepLogin: enterId </title>
+                            <attachments/>
+                            <steps>
+                                <step start='1596434704736' status='passed' stop='1596434705778'>
+                                    <name>I fill field "body > div > form > label:nth-child(2) > input", "bradley.cho@buzzvil.com"</name>
+                                    <title>I fill field "body > div > form > label:nth-child(2) > input", "bradley.cho@buzzvil.com"</title>
+                                    <attachments/>
+                                    <steps/>
+                                </step>
+                            </steps>
+                        </step>
+                    </steps>
+                </step>
+                <step start='1596434705779' status='passed' stop='1596434706105'>
+                    <name>And Password 입력 </name>
+                    <title>And Password 입력 </title>
+                    <attachments/>
+                    <steps>
+                        <step start='1596434705779' status='passed' stop='1596434706105'>
+                            <name>StepLogin: enterPassword </name>
+                            <title>StepLogin: enterPassword </title>
+                            <attachments/>
+                            <steps>
+                                <step start='1596434705779' status='passed' stop='1596434706105'>
+                                    <name>I fill field "body > div > form > label:nth-child(3) > input", "@NGEqUCNt27jxPR"</name>
+                                    <title>I fill field "body > div > form > label:nth-child(3) > input", "@NGEqUCNt27jxPR"</title>
+                                    <attachments/>
+                                    <steps/>
+                                </step>
+                            </steps>
+                        </step>
+                    </steps>
+                </step>
+                <step start='1596434706105' status='passed' stop='1596434706231'>
+                    <name>And 확인 버튼 클릭 </name>
+                    <title>And 확인 버튼 클릭 </title>
+                    <attachments/>
+                    <steps>
+                        <step start='1596434706105' status='passed' stop='1596434706231'>
+                            <name>StepLogin: clickSubmit </name>
+                            <title>StepLogin: clickSubmit </title>
+                            <attachments/>
+                            <steps>
+                                <step start='1596434706105' status='passed' stop='1596434706231'>
+                                    <name>I click "body > div > form > div > button"</name>
+                                    <title>I click "body > div > form > div > button"</title>
+                                    <attachments/>
+                                    <steps/>
+                                </step>
+                            </steps>
+                        </step>
+                    </steps>
+                </step>
+                <step start='1596434706231' status='failed' stop='1596434711015'>
+                    <name>And Direct Sales >> Ads 페이지로 이동 </name>
+                    <title>And Direct Sales >> Ads 페이지로 이동 </title>
+                    <attachments/>
+                    <steps>
+                        <step start='1596434706231' status='failed' stop='1596434711015'>
+                            <name>StepLogin: movetoAds </name>
+                            <title>StepLogin: movetoAds </title>
+                            <attachments/>
+                            <steps>
+                                <step start='1596434706231' status='failed' stop='1596434711013'>
+                                    <name>I click "body > div > section > div > div.view-container > div > section.header > div > div > div > button > span"</name>
+                                    <title>I click "body > div > section > div > div.view-container > div > section.header > div > div > div > button > span"</title>
+                                    <attachments/>
+                                    <steps/>
+                                </step>
+                            </steps>
+                        </step>
+                    </steps>
+                </step>
+            </steps>
+            <attachments>
+                <attachment title='Last Seen Screenshot' source='796c73db-05fa-4b6f-b2dc-bfe7075947c4-attachment.png' type='image/png' size='3534'/>
+            </attachments>
+            <failure>
+                <message>Clickable element "body > div > section > div > div.view-container > div > section.header > div > div > div > button > span" was not found by text|CSS|XPath</message>
+                <stack-trace>Error: Clickable element "body > div > section > div > div.view-container > div > section.header > div > div > div > button > span" was not found by text|CSS|XPath
+                    at new ElementNotFound (C:\Users\Bradley.cho\AppData\Roaming\npm-cache\_npx\6140\node_modules\codeceptjs\lib\helper\errors\ElementNotFound.js:14:11)
+                    at assertElementExists (C:\Users\Bradley.cho\AppData\Roaming\npm-cache\_npx\6140\node_modules\codeceptjs\lib\helper\Puppeteer.js:2408:11)
+                    at Puppeteer.proceedClick (C:\Users\Bradley.cho\AppData\Roaming\npm-cache\_npx\6140\node_modules\codeceptjs\lib\helper\Puppeteer.js:2172:5)
+                    at processTicksAndRejections (internal/process/task_queues.js:97:5)</stack-trace>
+            </failure>
+        </test-case>
+    </test-cases>
+</ns2:test-suite>
