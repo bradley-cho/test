@@ -97,8 +97,8 @@ When ('CPU, DCPU, TCPU 입력', () => {
   StepAllocation.cpu(cpuYN,hcpu,dcpu,tcpu)
 });
 When ('Include Group 입력', () => {
-  includeGroupName= 'Test_Unit_Group_Brad_AOS'
-  StepPlacement.includeGroup(includeGroupName)
+ // includeGroupName= 'Test_Unit_Group_Brad_AOS'
+ // StepPlacement.includeGroup(includeGroupName)
   
 });
 When ('Include Unit 입력', () => {
