@@ -54,5 +54,6 @@ Feature: Lineitem Creation
    
    Examples:
        | ID | Password | 
-       | bradley.cho@buzzvil.com  | @NGEqUCNt27jxPR |
        | test@buzzvil.com         | test            |
+       | bradley.cho@buzzvil.com  | @NGEqUCNt27jxPR |
+
