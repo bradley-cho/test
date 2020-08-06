@@ -27,6 +27,7 @@ module.exports = function() {
         //const isFieldRendered = this.isExistsElement("#adForm > div > div:nth-child(3) > div > div:nth-child(3) > div > div:nth-child(7) > div.input-group > input")
         if (checkReward == "1"){
           
+          //#adForm > div > div:nth-child(3) > div > div:nth-child(3) > div > div:nth-child(8)
           if (this.dontSeeElement({xpath:'/html/body/div/section/div/div[1]/div/section[2]/div/form/div/div[3]/div/div[2]/div/div[6]/div[2]/input'})){
             //this.click("#adForm > div > div:nth-child(3) > div > div:nth-child(3) > div > div:nth-child(6) > div:nth-child(2) > label > label > span")
             this.click("#adForm > div > div:nth-child(3) > div > div:nth-child(3) > div > div:nth-child(6) > div:nth-child(2) > label > label > span > span")

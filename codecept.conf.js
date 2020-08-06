@@ -13,7 +13,8 @@ exports.config = {
     StepProperity: './tests/testSteps/properity_test.js',
     StepBudget: './tests/testSteps/budget_test.js',
     StepAllocation: './tests/testSteps/allocation_test.js',
-    StepPlacement:'./tests/testSteps/placement_test.js'
+    StepPlacement:'./tests/testSteps/placement_test.js',
+    StepTearDown:'./tests/testSteps/tearDown_test.js'
   },
   mocha: {},
   bootstrap: null,
