@@ -122,7 +122,28 @@ When ('Save 클릭', () => {
 });
 
 
-// Then('', async()=>{
+ Then('New Creative 페이지로 이동', async()=>{
+  const cells = table.rows[1].cells;
+  /*Move to Lineitem detail page */
+  I.waitForElement('#creativeForm > div > div > div.card > div:nth-child(5) > div > div.label--wrap > label')
+  let str2 = await I.grabCurrentUrl()
+  const lineitem_id = str2.substr(89,100)
+  let lineitemDetailURL = 'https://dashboard-staging.buzzvil.com/campaign/direct_sales/ads/'+lineitem_id+'/detail'
+  I.amOnPage(lineitemDetailURL)
+  console.log("!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!"+lineitem_id)
+  
+  /* Validate created lineitem data*/
+  // Type
+  I.seeElement('body > div > section > div > div.view-container > div > section.header > div.summary-container > div > div.summary-info > table > tbody > tr:nth-child(1) > td',revenueType)
+  
+  // Total Budget
+  I.seeElement('body > div > section > div > div.view-container > div > section.header > div.summary-container > div > div.summary-stats-container > div:nth-child(2) > div:nth-child(2) > div.summary-stats-value','10,000')
+  
+  /**** Property ****/
+  // Name
+  I.seeElement('body > div > section > div > div.view-container > div > section.content-container > div > div.row.form__containter > div.col-sm-7 > div > div > div:nth-child(1) > div > div.value',revenueType+'_Regression_Test')
+  // Reveneue Type
+  I.seeElement('body > div > section > div > div.view-container > div > section.content-container > div > div.row.form__containter > div.col-sm-7 > div > div > div:nth-child(2) > div > div.value',revenueType)
 
-// })
+ })
 

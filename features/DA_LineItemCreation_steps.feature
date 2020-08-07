@@ -26,7 +26,7 @@ Feature: Lineitem Creation
     And Exclude Unit 입력
     And Targeting 셋팅
     And Save 클릭
-  #  Then New Creative 페이지로 이동
+   Then New Creative 페이지로 이동
   #  When Detail 페이지로 이동
   #  Then Revenue Type 확인
   #   And Name 확인
