@@ -123,7 +123,7 @@ When ('Save 클릭', () => {
 
 
  Then('New Creative 페이지로 이동', async()=>{
-  const cells = table.rows[1].cells;
+  //const cells = table.rows[1].cells;
   /*Move to Lineitem detail page */
   I.waitForElement('#creativeForm > div > div > div.card > div:nth-child(5) > div > div.label--wrap > label')
   let str2 = await I.grabCurrentUrl()
