@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuites name="Mocha Tests" time="37.0020" tests="2" failures="0">
+  <testsuite name="Root Suite" timestamp="2020-08-07T00:23:31" tests="0" time="0.0000" failures="0">
+  </testsuite>
+  <testsuite name="Lineitem Creation" timestamp="2020-08-07T00:23:31" tests="2" time="37.0020" failures="0">
+    <testcase name="Lineitem Creation 라인아이템 생성 확인 {&quot;ID&quot;:&quot;test@buzzvil.com&quot;,&quot;Password&quot;:&quot;test&quot;}" time="18.5130" classname="라인아이템 생성 확인 {&quot;ID&quot;:&quot;test@buzzvil.com&quot;,&quot;Password&quot;:&quot;test&quot;}">
+    </testcase>
+    <testcase name="Lineitem Creation 라인아이템 생성 확인 {&quot;ID&quot;:&quot;bradley.cho@buzzvil.com&quot;,&quot;Password&quot;:&quot;@NGEqUCNt27jxPR&quot;}" time="18.4890" classname="라인아이템 생성 확인 {&quot;ID&quot;:&quot;bradley.cho@buzzvil.com&quot;,&quot;Password&quot;:&quot;@NGEqUCNt27jxPR&quot;}">
+    </testcase>
+  </testsuite>
+</testsuites>

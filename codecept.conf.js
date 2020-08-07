@@ -16,7 +16,11 @@ exports.config = {
     StepPlacement:'./tests/testSteps/placement_test.js',
     StepTearDown:'./tests/testSteps/tearDown_test.js'
   },
-  mocha: {},
+  mocha: {
+    "reporterOptions": {
+      "mochaFile": "output/result.xml"
+    }
+  },
   bootstrap: null,
   teardown: null,
   hooks: [],
@@ -35,6 +39,7 @@ exports.config = {
     allure: {
     }
   },
+  
   tests: './tests/*_test.js',
   name: 'exec3'
 }
