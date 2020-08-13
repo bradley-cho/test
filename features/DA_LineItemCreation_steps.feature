@@ -9,13 +9,13 @@ Feature: Lineitem Creation
     And Password 입력
     And 확인 버튼 클릭
     And Direct Sales >> Ads 페이지로 이동
-    And Revenue Type 입력
-    And Name 입력
+    And Name <RevenueType> Regression_Test 입력
+    And <RevenueType> 입력
     And Test : off, Backfill : off, Lockscreen : On, Offerwall : Off 설정
     And Platform 선택
-    And Category 선택, Tag 선택, 3rd Party Tracker 선택
-    And Landing Type 선택 
-    And Budget 입력
+    And Category Tag 3rd Party Tracker 선택
+    And Landing Type 선택
+    And Budget : Unit Price = <unitPrice>, Landing Point = <landingPoints> 입력
     And Period 셋팅
     And Display Type 선택
     And Display Weight 입력
@@ -53,7 +53,17 @@ Feature: Lineitem Creation
   #   And Targeting 확인        
    
    Examples:
-       | ID | Password | 
-       | test@buzzvil.com         | test            |
-       | bradley.cho@buzzvil.com  | @NGEqUCNt27jxPR |
+       | RevenueType | unitPrice  | landingPoints |
+       | CPC | 20 | 20 |
+       | CPM |  8  |  8 |
+      #  | CPI |
+      #  | CPE |
+      #  | CPA |
+      #  | CPL |
+      #  | CPV |
+      #  | CPInsta |
+      #  | CPQ |
+      #  | CPK |
+      #  | CPYoutube |
+       
 

@@ -12,6 +12,7 @@ module.exports = function() {
       this.click('body > div > form > div > button');
     },
     movetoAds: function(){
+      this.waitForElement('body > div > section > div > div.view-container > div > section.header > div > div > div > button > span',5)
       this.click("body > div > section > div > div.view-container > div > section.header > div > div > div > button > span")
       this.click("body > div > section > div > div.view-container > div > section.header > div > div > div > div > div > a:nth-child(2)")
     },

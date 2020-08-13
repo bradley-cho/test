@@ -2,14 +2,14 @@ module.exports = function() {
     return actor({
       //Name 입력
       setCurrency: function(currencyCode) {
-        if(cyrrencyCode = 'currencyCode')
-        {
-          this.click("#adForm > div > div:nth-child(3) > div > div:nth-child(2) > div > div > div.multiselect.multiselect-wrapper.shrink > div.multiselect__tags")
+        switch(currencyCode){
+          case "KRW" : return this.click("#adForm > div > div:nth-child(3) > div > div:nth-child(2) > div > div > div.multiselect.multiselect-wrapper.shrink > div.multiselect__tags");
+          default: return  this.click("#adForm > div > div:nth-child(3) > div > div:nth-child(2) > div > div > div.multiselect.multiselect-wrapper.shrink > div.multiselect__tags");
         }
         
       },
-      setBudget: function(totalBudget,dailyBudget,unitPrice, checkSafeBudget, safeBudget, checkReward, landingPoints, rewardPeriod) {
 
+      setBudget: async function(totalBudget,dailyBudget,unitPrice, checkSafeBudget, safeBudget) {
         //Total Budget
         this.fillField("#adForm > div > div:nth-child(3) > div > div:nth-child(3) > div > div:nth-child(2) > div.input-group > input",totalBudget);
         //Daily Budget
@@ -18,26 +18,35 @@ module.exports = function() {
         this.fillField("#adForm > div > div:nth-child(3) > div > div:nth-child(3) > div > div:nth-child(4) > div.input-group > input",unitPrice);
         //Safe Budget
         if (checkSafeBudget =="1"){
-          this.click("#adForm > div > div:nth-child(3) > div > div:nth-child(3) > div > div:nth-child(5) > div > div.togglable__toggle > input[type=checkbox]")
+          this.checkOption("#adForm > div > div:nth-child(3) > div > div:nth-child(3) > div > div:nth-child(5) > div > div.togglable__toggle > input[type=checkbox]")
 
           this.fillField("#adForm > div > div:nth-child(3) > div > div:nth-child(3) > div > div:nth-child(5) > div > div.togglable__field > div > div.input-group > input",safeBudget)
-        }
+        }else{
+          this.uncheckOption("#adForm > div > div:nth-child(3) > div > div:nth-child(3) > div > div:nth-child(5) > div > div.togglable__toggle > input[type=checkbox]")
+        }        
+      },
 
+      setReward : async function(checkReward, landingPoints, rewardPeriod) {
         //landingPoints
-        //const isFieldRendered = this.isExistsElement("#adForm > div > div:nth-child(3) > div > div:nth-child(3) > div > div:nth-child(7) > div.input-group > input")
+        let checkRewardStatus = await this.grabTextFrom("#adForm > div > div:nth-child(3) > div > div:nth-child(3) > div > div:nth-child(6) > div:nth-child(2) > label > span","span");
         if (checkReward == "1"){
           
-          //#adForm > div > div:nth-child(3) > div > div:nth-child(3) > div > div:nth-child(8)
-          if (this.dontSeeElement({xpath:'/html/body/div/section/div/div[1]/div/section[2]/div/form/div/div[3]/div/div[2]/div/div[6]/div[2]/input'})){
-            //this.click("#adForm > div > div:nth-child(3) > div > div:nth-child(3) > div > div:nth-child(6) > div:nth-child(2) > label > label > span")
+          if (checkRewardStatus=="Off"){
+            this.click("#adForm > div > div:nth-child(3) > div > div:nth-child(3) > div > div:nth-child(6) > div:nth-child(2) > label > label > span")
+          }
+          console.log(landingPoints)
+          this.fillField("#adForm > div > div:nth-child(3) > div > div:nth-child(3) > div > div:nth-child(7) > div.input-group > input",landingPoints)
+          // this.wait(10)
+
+        }else if(checkReward =="0") {
+          if (checkRewardStatus=="On"){
             this.click("#adForm > div > div:nth-child(3) > div > div:nth-child(3) > div > div:nth-child(6) > div:nth-child(2) > label > label > span > span")
           }
-          this.fillField("#adForm > div > div:nth-child(3) > div > div:nth-child(3) > div > div:nth-child(7) > div.input-group > input",landingPoints)
         }
         
         //rewardPeriod
         this.fillField("reward_period", rewardPeriod)
-        
+        // this.wait(10)
       }
     });
   }
