@@ -29,5 +29,5 @@ Scenario('test something', async(I) => {
     //#adForm > div > div:nth-child(3) > div > div:nth-child(3) > div > div:nth-child(6) > div:nth-child(2) > label > span
     
     let checkRewardStatus = await I.grabAttributeFrom("#adForm > div > div:nth-child(3) > div > div:nth-child(3) > div > div:nth-child(6) > div:nth-child(2) > label > span","toggle-label");
-    await console.log("aaaaaaaaaaaaaaaaaaaaaaaaaaaa:"+checkRewardStatus )
+//    await console.log("aaaaaaaaaaaaaaaaaaaaaaaaaaaa:"+checkRewardStatus )
 });
