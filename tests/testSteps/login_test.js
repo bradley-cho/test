@@ -19,8 +19,21 @@ module.exports = function() {
     landingAds: function(){
       this.see("body > div > section > div > div.view-container > div > section.header > div > div > div > button > span")
       this.see("body > div > section > div > div.view-container > div > section.header > div > div > div > div > div > a:nth-child(2)")
-    }
+    },
+
+    moveToLineitemDetailPage: async function() {
+      /*Move to Lineitem detail page */
+      //this.waitForElement('#creativeForm > div > div > div.card > div:nth-child(5) > div > div.label--wrap > label',10)
+      this.wait(3)
+      let str2 = await this.grabCurrentUrl()
+      const lineitem_id = str2.substr(89,100)
+      let lineitemDetailURL = 'https://dashboard-staging.buzzvil.com/campaign/direct_sales/ads/'+lineitem_id+'/detail'
+      this.amOnPage(lineitemDetailURL)
+     }
+
   });
+
+  
 }
 
 

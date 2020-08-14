@@ -1,3 +1,5 @@
+const assert = require('assert');
+
 module.exports = function() {
     return actor({
       //Name 입력
@@ -5,24 +7,25 @@ module.exports = function() {
         this.fillField("item_name", RevenueType+"_Regression_Test");
       },
 
+      checkName: async function(RevenueType){
+        let expectedName = await RevenueType+"_Regression_Test";
+        let actualNAme = await this.grabTextFrom("body > div > section > div > div.view-container > div > section.content-container > div > div.row.form__containter > div.col-sm-7 > div > div > div:nth-child(1) > div > div.value")
+        await assert.equal(expectedName, actualNAme)
+
+      },
+
       //Revenue Type 입력
-      revenueType: function(RevenueType) {
-        this.click("#adForm > div > div:nth-child(2) > div > div > div > div:nth-child(3) > div.multiselect.multiselect-wrapper.shrink > div.multiselect__tags > span")
-        switch(RevenueType){
-          case "CPC"        : return this.click("#adForm > div > div:nth-child(2) > div > div > div > div:nth-child(3) > div.multiselect.multiselect--above.multiselect-wrapper.shrink > div.multiselect__content-wrapper > ul > li:nth-child(1)")
-          case "CPM"        : return this.click("#adForm > div > div:nth-child(2) > div > div > div > div:nth-child(3) > div.multiselect.multiselect--above.multiselect-wrapper.shrink > div.multiselect__content-wrapper > ul > li:nth-child(2)")
-          case "CPI"        : return this.click("#adForm > div > div:nth-child(2) > div > div > div > div:nth-child(3) > div.multiselect.multiselect--above.multiselect-wrapper.shrink > div.multiselect__content-wrapper > ul > li:nth-child(3)")
-          case "CPE"        : return this.click("#adForm > div > div:nth-child(2) > div > div > div > div:nth-child(3) > div.multiselect.multiselect--above.multiselect-wrapper.shrink > div.multiselect__content-wrapper > ul > li:nth-child(4)")
-          case "CPA"        : return this.click("#adForm > div > div:nth-child(2) > div > div > div > div:nth-child(3) > div.multiselect.multiselect--above.multiselect-wrapper.shrink > div.multiselect__content-wrapper > ul > li:nth-child(5)")
-          case "CPL"        : return this.click("#adForm > div > div:nth-child(2) > div > div > div > div:nth-child(3) > div.multiselect.multiselect--above.multiselect-wrapper.shrink > div.multiselect__content-wrapper > ul > li:nth-child(6)")
-          case "CPV"        : return this.click("#adForm > div > div:nth-child(2) > div > div > div > div:nth-child(3) > div.multiselect.multiselect--above.multiselect-wrapper.shrink > div.multiselect__content-wrapper > ul > li:nth-child(7)")
-          case "CPInsta"    : return this.click("#adForm > div > div:nth-child(2) > div > div > div > div:nth-child(3) > div.multiselect.multiselect--above.multiselect-wrapper.shrink > div.multiselect__content-wrapper > ul > li:nth-child(8)")
-          case "CPQ"        : return this.click("#adForm > div > div:nth-child(2) > div > div > div > div:nth-child(3) > div.multiselect.multiselect--above.multiselect-wrapper.shrink > div.multiselect__content-wrapper > ul > li:nth-child(9)")
-          case "CPK"        : return this.click("#adForm > div > div:nth-child(2) > div > div > div > div:nth-child(3) > div.multiselect.multiselect--above.multiselect-wrapper.shrink > div.multiselect__content-wrapper > ul > li:nth-child(10)")
-          case "CPL"        : return this.click("#adForm > div > div:nth-child(2) > div > div > div > div:nth-child(3) > div.multiselect.multiselect--above.multiselect-wrapper.shrink > div.multiselect__content-wrapper > ul > li:nth-child(11)")
-          case "CPYoutuve"  : return this.click("#adForm > div > div:nth-child(2) > div > div > div > div:nth-child(3) > div.multiselect.multiselect--above.multiselect-wrapper.shrink > div.multiselect__content-wrapper > ul > li:nth-child(12)")
-          case "CPS"        : return this.click("#adForm > div > div:nth-child(2) > div > div > div > div:nth-child(3) > div.multiselect.multiselect--above.multiselect-wrapper.shrink > div.multiselect__content-wrapper > ul > li:nth-child(13)")
-        }
+      revenueType: async function(RevenueType) {
+        // this.click("#adForm > div > div:nth-child(2) > div > div > div > div:nth-child(3) > div.multiselect.multiselect-wrapper.shrink > div.multiselect__tags > span")
+        await this.fillField('#adForm > div > div:nth-child(2) > div > div > div > div:nth-child(3) > div.multiselect.multiselect-wrapper.shrink > div.multiselect__tags > input', RevenueType);
+        await this.wait(1)
+        await this.pressKey('Enter');
+      },
+
+      checkRevenueType: async function(RevenueType) {
+        let actualReveneyType = await this.grabTextFrom("body > div > section > div > div.view-container > div > section.content-container > div > div.row.form__containter > div.col-sm-7 > div > div > div:nth-child(2) > div > div.value");
+        await assert.equal(actualReveneyType, RevenueType)
+       
       },
       
       setEnv: function() {
@@ -40,7 +43,7 @@ module.exports = function() {
         if(platformCode == '1'){
           //Android
           this.click("#adForm > div > div:nth-child(2) > div > div > div > div:nth-child(8) > div:nth-child(4) > label")
-        }else if(platformCode = '2') {
+        }else if(platformCode == '2') {
           //iOS
           this.click("#adForm > div > div:nth-child(2) > div > div > div > div:nth-child(8) > div:nth-child(3) > label")
         }else{
@@ -48,7 +51,62 @@ module.exports = function() {
           this.click("#adForm > div > div:nth-child(2) > div > div > div > div:nth-child(8) > div:nth-child(4) > label")
         }
         
+      },
+      checkPlatform: async function(platformCode){
+        if(platformCode == '1'){
+          //Android
+          let actualPlatform = await this.grabTextFrom("body > div > section > div > div.view-container > div > section.content-container > div > div.row.form__containter > div.col-sm-7 > div > div > div:nth-child(7) > div > div.value")
+          await assert.equal(actualPlatform, "Android")
+        }else if(platformCode == '2') {
+          //iOS
+          let actualPlatform = await this.grabTextFrom("body > div > section > div > div.view-container > div > section.content-container > div > div.row.form__containter > div.col-sm-7 > div > div > div:nth-child(7) > div > div.value")
+          await assert.equal(actualPlatform, "iOS")
+
+        }else{
+          // Android & iOS
+          let actualPlatform = await this.grabTextFrom("body > div > section > div > div.view-container > div > section.content-container > div > div.row.form__containter > div.col-sm-7 > div > div > div:nth-child(7) > div > div.value")
+          await assert.equal(actualPlatform, "Android & iOS")
+        }
+
+      },
+
+      setPackageName: async function(packageName){
+        await this.fillField("extra_data.package_name",packageName)
+      },
+      checkPackageName: async function(packageName){
+        let actualPackageName = await this.grabTextFrom("body > div > section > div > div.view-container > div > section.content-container > div > div > div.col-sm-7 > div > div > div:nth-child(11) > div > div.value")
+        await assert.equal(packageName, actualPackageName)
+      },
+
+      setURLScheme: async function(URLScheme){
+        await this.fillField("extra_data.url_scheme",URLScheme)
+      },
+
+      checkURLScheme: async function(URLScheme){
+        let actualURLScheme = await this.grabTextFrom("body > div > section > div > div.view-container > div > section.content-container > div > div > div.col-sm-7 > div > div > div:nth-child(11) > div > div.value")
+        await assert.equal(URLScheme, actualURLScheme)
+      },
+      setLaunchPackage: async function(launchPackage){
+        let valueOfLaunchPackage = await this.grabTextFrom("#adForm > div > div:nth-child(2) > div > div > div > div:nth-child(11) > div:nth-child(2) > label > span")
+        
+        if(launchPackage == "On" && valueOfLaunchPackage == "On"){
+          
+        }else if (launchPackage == "Off" && valueOfLaunchPackage == "On"){
+          this.click("#adForm > div > div:nth-child(2) > div > div > div > div:nth-child(11) > div:nth-child(2) > label > label > span > span")
+        }else if (launchPackage == "Off" && valueOfLaunchPackage == "Off"){
+          
+        }else if (launchPackage == "On" && valueOfLaunchPackage == "Off"){
+          this.click("#adForm > div > div:nth-child(2) > div > div > div > div:nth-child(11) > div:nth-child(2) > label > label > span > span")
+        }        
+      },
+
+      checkLaunchPackage: async function(launchPackage){
+        let actualLaunchPackage = await this.grabTextFrom("body > div > section > div > div.view-container > div > section.content-container > div > div > div.col-sm-7 > div > div > div:nth-child(10) > div > div.value")
+        await assert.equal(launchPackage, actualLaunchPackage)
       }
+
+
+    
     });
   }
 

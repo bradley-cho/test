@@ -6,6 +6,10 @@ exports.config = {
       show: true,
       windowSize: '1200X1600'
     }
+    // ,
+    // AssertWrapper : {
+    //   require: "codeceptjs-assert"
+    // }
   },
   include: {
     I: './steps_file.js',
@@ -14,7 +18,8 @@ exports.config = {
     StepBudget: './tests/testSteps/budget_test.js',
     StepAllocation: './tests/testSteps/allocation_test.js',
     StepPlacement:'./tests/testSteps/placement_test.js',
-    StepTearDown:'./tests/testSteps/tearDown_test.js'
+    StepTearDown:'./tests/testSteps/tearDown_test.js',
+    StepDataValodation:'./tests/testSteps/dataValidation.js'
   },
   mocha: {
     "reporterOptions": {
