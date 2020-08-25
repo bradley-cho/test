@@ -42,13 +42,16 @@ module.exports = function() {
         
         if(platformCode == '1'){
           //Android
-          this.click("#adForm > div > div:nth-child(2) > div > div > div > div:nth-child(8) > div:nth-child(4) > label")
+          //this.click("#adForm > div > div:nth-child(2) > div > div > div > div:nth-child(8) > div:nth-child(2) > label")
+          this.click("Android")
         }else if(platformCode == '2') {
           //iOS
-          this.click("#adForm > div > div:nth-child(2) > div > div > div > div:nth-child(8) > div:nth-child(3) > label")
+          this.click("iOS")
+          //this.click("#adForm > div > div:nth-child(2) > div > div > div > div:nth-child(8) > div:nth-child(3) > label")
         }else{
           // Android & iOS
-          this.click("#adForm > div > div:nth-child(2) > div > div > div > div:nth-child(8) > div:nth-child(4) > label")
+          this.click("Android & iOS")
+          //this.click("#adForm > div > div:nth-child(2) > div > div > div > div:nth-child(8) > div:nth-child(4) > label")
         }
         
       },
@@ -74,7 +77,7 @@ module.exports = function() {
         await this.fillField("extra_data.package_name",packageName)
       },
       checkPackageName: async function(packageName){
-        let actualPackageName = await this.grabTextFrom("body > div > section > div > div.view-container > div > section.content-container > div > div > div.col-sm-7 > div > div > div:nth-child(11) > div > div.value")
+        let actualPackageName = await this.grabTextFrom("body > div > section > div > div.view-container > div > section.content-container > div > div.row.form__containter > div.col-sm-7 > div > div > div:nth-child(11) > div > div.value")
         await assert.equal(packageName, actualPackageName)
       },
 
@@ -83,58 +86,165 @@ module.exports = function() {
       },
 
       checkURLScheme: async function(URLScheme){
-        let actualURLScheme = await this.grabTextFrom("body > div > section > div > div.view-container > div > section.content-container > div > div > div.col-sm-7 > div > div > div:nth-child(11) > div > div.value")
+        let actualURLScheme = await this.grabTextFrom("body > div > section > div > div.view-container > div > section.content-container > div > div.row.form__containter > div.col-sm-7 > div > div > div:nth-child(12) > div > div.value")
         await assert.equal(URLScheme, actualURLScheme)
       },
       setLaunchPackage: async function(launchPackage){
-        let valueOfLaunchPackage = await this.grabTextFrom("#adForm > div > div:nth-child(2) > div > div > div > div:nth-child(11) > div:nth-child(2) > label > span")
-        
+        let elementOfLaunchPackage = "#adForm > div > div:nth-child(2) > div > div > div > div:nth-child(10) > div:nth-child(2) > label > span"
+        let valueOfLaunchPackage = await this.grabTextFrom(elementOfLaunchPackage)
         if(launchPackage == "On" && valueOfLaunchPackage == "On"){
           
         }else if (launchPackage == "Off" && valueOfLaunchPackage == "On"){
-          this.click("#adForm > div > div:nth-child(2) > div > div > div > div:nth-child(11) > div:nth-child(2) > label > label > span > span")
+          this.click("#adForm > div > div:nth-child(2) > div > div > div > div:nth-child(10) > div:nth-child(2) > label > label > span > span")
         }else if (launchPackage == "Off" && valueOfLaunchPackage == "Off"){
           
         }else if (launchPackage == "On" && valueOfLaunchPackage == "Off"){
-          this.click("#adForm > div > div:nth-child(2) > div > div > div > div:nth-child(11) > div:nth-child(2) > label > label > span > span")
+          this.click("#adForm > div > div:nth-child(2) > div > div > div > div:nth-child(10) > div:nth-child(2) > label > label > span > span")
         }        
       },
 
       checkLaunchPackage: async function(launchPackage){
-        let actualLaunchPackage = await this.grabTextFrom("body > div > section > div > div.view-container > div > section.content-container > div > div > div.col-sm-7 > div > div > div:nth-child(10) > div > div.value")
-        await assert.equal(launchPackage, actualLaunchPackage)
-      }
+        let actualLaunchPackage = await this.grabTextFrom("body > div > section > div > div.view-container > div > section.content-container > div > div.row.form__containter > div.col-sm-7 > div > div > div:nth-child(10) > div > div.value")
+        await assert.equal(launchPackage, actualLaunchPackage.replace(/\n/g,""))
+      },
+      
 
-
+      setLandingType: async function(landingType){
+        let field = "#adForm > div > div:nth-child(2) > div > div > div > div:nth-child(11) > div.multiselect.multiselect-wrapper.shrink > div.multiselect__tags > input"
+        
+        switch(landingType){
+          case "CardView" : 
+           await this.fillField(field, "Card View");
+           await this.wait(1)
+           await this.pressKey("Enter")
+           break;
+          default : 
+           await this.fillField(field, landingType);
+           await this.wait(1)
+           await this.pressKey("Enter")
+           break;
     
+        }
+        await this.wait(1)
+        await this.pressKey('Enter');
+      },
+      
+    
+      checkLandingType: async function(landingType){
+        let actualLandingType = await this.grabTextFrom("body > div > section > div > div.view-container > div > section.content-container > div > div.row.form__containter > div.col-sm-7 > div > div > div:nth-child(13) > div > div.value")
+        await assert.equal(landingType, actualLandingType.replace(/\n/g,""))
+      },
+      // Integration Type 선택
+      setIntegrationType: async function(integrationType){
+        await console.log("integrationType:::::::::::::::::::::::::"+integrationType)
+
+        if(integrationType == "3rdPartyTracker"){
+          await this.fillField('#adForm > div > div:nth-child(2) > div > div > div > div:nth-child(10) > div.size > div > div.multiselect__tags > input', "3rd Party Tracker"); 
+          await this.wait(1)
+          await this.pressKey('Enter');
+        }else if (integrationType == "Web"){
+          await this.fillField('#adForm > div > div:nth-child(2) > div > div > div > div:nth-child(10) > div.size > div > div.multiselect__tags > input', integrationType);
+          await this.wait(1)
+          await this.pressKey('Tab');
+        }
+      },
+      // Integration Type 검증
+      checkIntegrationType: async function(integrationType){
+        let actualintegrationType = await this.grabTextFrom("body > div > section > div > div.view-container > div > section.content-container > div > div.row.form__containter > div.col-sm-7 > div > div > div:nth-child(10) > div > div.value")
+        await assert.equal(integrationType, integrationType.replace(/\n/g,""))
+      },
+
+      //App Id 입력
+      setAppId: async function(appId){
+        await this.waitForElement({ xpath: '/html/body/div/section/div/div[1]/div/section[2]/div/form/div/div[2]/div/div/div/div[10]/input'},5);   //extra_data.app_id
+        await this.fillField({ xpath: '/html/body/div/section/div/div[1]/div/section[2]/div/form/div/div[2]/div/div/div/div[10]/input'},appId)
+      },
+      //App Id 검증
+      checkAppId: async function(appId){
+        let actualappId = await this.grabTextFrom("body > div > section > div > div.view-container > div > section.content-container > div > div.row.form__containter > div.col-sm-7 > div > div > div:nth-child(11) > div > div.value")
+        await assert.equal(appId, actualappId.replace(/\n/g,""))
+      },
+
+      // 3rd Party tracker 선택
+      setThirdPartyTracker: async function(thirdPartyTracker){
+       // switch
+       // 
+        let selectThridPartyTracker = "#adForm > div > div:nth-child(2) > div > div > div > div:nth-child(11) > div.size > div > div > div.multiselect__tags > input"
+       // let selectThridPartyTracker = "#adForm > div > div:nth-child(2) > div > div > div > div:nth-child(11) > div.size > div > div > div.multiselect__tags > span"
+
+        await this.waitForElement(selectThridPartyTracker,5)
+        await this.fillField(selectThridPartyTracker, thirdPartyTracker);
+        await this.wait(2)
+        await this.pressKey('Enter');
+      },
+
+      // 3rd Party tracker 확인
+      checkThirdPartyTracker: async function(thirdPartyTracker){
+        let actualthirdPartyTracker = await this.grabTextFrom("body > div > section > div > div.view-container > div > section.content-container > div > div.row.form__containter > div.col-sm-7 > div > div > div:nth-child(11) > div > div.field--wrap > div")
+        await assert.equal(thirdPartyTracker, actualthirdPartyTracker.replace(/\n/g,""))
+      },
+
+      // Event Name 입력
+      setEventName: async function(eventName){
+        await this.fillField('extra_data.cpa_event_name', eventName);
+      },
+      // Event Name 확인
+      checkEventName: async function(eventName){
+        let actualeventName = await this.grabTextFrom("body > div > section > div > div.view-container > div > section.content-container > div > div.row.form__containter > div.col-sm-7 > div > div > div:nth-child(12) > div > div.value")
+        await assert.equal(eventName, actualeventName.replace(/\n/g,""))
+      },
+
+      //Facebook 
+      setFacebookLink: async function(facebooklink, facebookid){
+        //Facebook link
+        let fieldFacebookLink = {xpath : "/html/body/div/section/div/div[1]/div/section[2]/div/form/div/div[2]/div/div/div/div[9]/div[2]/textarea[2]"};
+        await this.fillField(fieldFacebookLink,facebooklink);
+        //Facebook ID
+        let fieldFacebookId = {xpath : "/html/body/div/section/div/div[1]/div/section[2]/div/form/div/div[2]/div/div/div/div[10]/input"};
+        await this.fillField(fieldFacebookId,facebookid);
+
+
+      },
+      //Instagram
+      setInstagram: async function(instagramId){
+        let fieldInstagramId = {xpath:"/html/body/div/section/div/div[1]/div/section[2]/div/form/div/div[2]/div/div/div/div[9]/input"}
+        await this.fillField(fieldInstagramId,instagramId);
+      },
+
+      //Kakao Channel
+      setKakaoChannel: async function(kakaoChnnel){
+        let fieldKakaoChannel= "#adForm > div > div:nth-child(2) > div > div > div > div:nth-child(10) > div.multiselect-action-container > div.size > div > div > div.multiselect__tags > input"
+        await this.fillField(fieldKakaoChannel,kakaoChnnel);
+        await this.wait(2)
+        await this.pressKey('Enter');
+      },
+
+      //Channel ID
+      setChannelId: async function(chnnelId){
+        let fieldChnnelId= {xpath : "/html/body/div/section/div/div[1]/div/section[2]/div/form/div/div[2]/div/div/div/div[9]/input"}
+        await this.fillField(fieldChnnelId,chnnelId);
+      },
+
+
+      //2nd Landing URL
+      setSecondLandingURL: async function(secondLandingUrl, RevenueType){
+        var fieldSecondLandingUrl
+        switch(RevenueType){
+          case "CPL"    : 
+            fieldSecondLandingUrl = {xpath : "/html/body/div/section/div/div[1]/div/section[2]/div/form/div/div[2]/div/div/div/div[11]/div[2]/textarea[2]"};
+            await this.fillField(fieldSecondLandingUrl,secondLandingUrl)
+            break;
+          case "CPInsta":
+          case "CPK":
+            fieldSecondLandingUrl = {xpath : "/html/body/div/section/div/div[1]/div/section[2]/div/form/div/div[2]/div/div/div/div[10]/div[2]/textarea[2]"};
+            await this.fillField(fieldSecondLandingUrl,secondLandingUrl)
+            break;
+          case "CPQ":
+            fieldSecondLandingUrl = {xpath : "/html/body/div/section/div/div[1]/div/section[2]/div/form/div/div[2]/div/div/div/div[9]/div[2]/textarea[2]"};
+            await this.fillField(fieldSecondLandingUrl,secondLandingUrl)
+            break;
+            
+        }
+      }
     });
   }
-
-
-
-
-
-// const { I } = inject();
-
-// module.exports = {
-
-//     fields: {
-//         email: 'body > div > form > label:nth-child(2) > input',
-//         password: 'body > div > form > label:nth-child(3) > input'
-//       },
-
-//     submitButton: {selector : 'body > div > form > div > button'},
-
-//     sendForm(email, password){
-//         I.fillField(this.fields.email, email);
-//         I.fillField(this.fields.password, password);
-//         I.click(this.submitButton);
-//     },
-
-//     register(email, password) {
-//     // use another page object inside current one
-//     registerPage.registerUser({ email, password });
-//     }
-
-// }
-

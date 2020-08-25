@@ -4,7 +4,7 @@ exports.config = {
     Puppeteer: {
       url: 'https://dashboard-staging.buzzvil.com/',
       show: true,
-      windowSize: '1200X1600'
+      windowSize: '1800X1600'
     }
     // ,
     // AssertWrapper : {
@@ -19,7 +19,8 @@ exports.config = {
     StepAllocation: './tests/testSteps/allocation_test.js',
     StepPlacement:'./tests/testSteps/placement_test.js',
     StepTearDown:'./tests/testSteps/tearDown_test.js',
-    StepDataValodation:'./tests/testSteps/dataValidation.js'
+    StepDataValodation:'./tests/testSteps/dataValidation.js',
+    StepCPSSetting:'./tests/testSteps/CPSSetting_test.js'
   },
   mocha: {
     "reporterOptions": {

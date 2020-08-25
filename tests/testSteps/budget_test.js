@@ -38,7 +38,7 @@ module.exports = function() {
 
       },
       
-      setReward : async function(checkReward, landingPoints, rewardPeriod) {
+      setReward : async function(checkReward, landingPoints, rewardPeriod, actionInterval, RevenueType) {
         //landingPoints
         let checkRewardStatus = await this.grabTextFrom("#adForm > div > div:nth-child(3) > div > div:nth-child(3) > div > div:nth-child(6) > div:nth-child(2) > label > span","span");
         if (checkReward == "Y"){
@@ -56,8 +56,15 @@ module.exports = function() {
           }
         }
         
-        //rewardPeriod
-        this.fillField("reward_period", rewardPeriod)
+        switch(RevenueType){
+          case "CPV" : 
+            this.fillField("extra_data.action_interval",actionInterval)
+            break;
+          default : 
+            //rewardPeriod
+            this.fillField("reward_period", rewardPeriod)
+            break;
+        }
         // this.wait(10)
       },
 

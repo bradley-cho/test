@@ -26,8 +26,8 @@ module.exports = function() {
       //this.waitForElement('#creativeForm > div > div > div.card > div:nth-child(5) > div > div.label--wrap > label',10)
       this.wait(3)
       let str2 = await this.grabCurrentUrl()
-      const lineitem_id = str2.substr(89,100)
-      let lineitemDetailURL = 'https://dashboard-staging.buzzvil.com/campaign/direct_sales/ads/'+lineitem_id+'/detail'
+      const lineitem_id = str2.substr(91,102)
+      let lineitemDetailURL = 'https://dashboard-stagingqa.buzzvil.com/campaign/direct_sales/ads/'+lineitem_id+'/detail'
       this.amOnPage(lineitemDetailURL)
      }
 
