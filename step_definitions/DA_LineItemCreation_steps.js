@@ -350,6 +350,7 @@ Then('Name 확인 : {word}', async(RevenueType) =>{
 });
 Then('Test : off, Backfill : off, Lockscreen : On, Offerwall : Off 확인', async() =>{
   console.log("Test : off, Backfill : off, Lockscreen : On, Offerwall : Off 확인")
+  StepProperity.checkEnviroment();
 });
 Then('Platform 확인 : {int}', async(platformCode) =>{
   console.log("Platform 확인")

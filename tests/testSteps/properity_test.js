@@ -28,6 +28,7 @@ module.exports = function() {
        
       },
       
+      //Environment 설정
       setEnv: function() {
         //Test
 //        this.click("#adForm > div > div:nth-child(2) > div > div > div > div:nth-child(4) > div:nth-child(2) > label > label > span")
@@ -38,6 +39,14 @@ module.exports = function() {
         //Offerwall
 //        this.click("#adForm > div > div:nth-child(2) > div > div > div > div:nth-child(7) > div:nth-child(2) > label > label > span")
       },
+
+      //Environment 확인
+      checkEnviroment: async function(){
+        let actualLockscreenValue = await this.grabTextFrom("body > div > section > div > div.view-container > div > section.content-container > div > div > div.col-sm-7 > div > div > div:nth-child(6) > div > div.value")
+        await assert.equal("On", actualLockscreenValue.replace(/\n/g,""))
+      },
+
+      //Platform 설정
       setPlatform: function(platformCode){
         
         if(platformCode == '1'){
@@ -55,6 +64,7 @@ module.exports = function() {
         }
         
       },
+      //Platform 확인
       checkPlatform: async function(platformCode){
         if(platformCode == '1'){
           //Android
