@@ -119,27 +119,74 @@ module.exports = function() {
       },
       
 
-      setLandingType: async function(landingType){
-        let field = "#adForm > div > div:nth-child(2) > div > div > div > div:nth-child(11) > div.multiselect.multiselect-wrapper.shrink > div.multiselect__tags > input"
+      setLandingType: async function(landingType, RevenueType, platformCode, integrationType){
         
-        switch(landingType){
-          case "CardView" : 
-           await this.fillField(field, "Card View");
-           await this.wait(1)
-           await this.pressKey("Enter")
+        var field
+
+        switch(RevenueType){
+          case "CPC" :
+          case "CPM" :
+            field = "#adForm > div > div:nth-child(2) > div > div > div > div:nth-child(11)";
+            break;
+          case "CPI" :
+            switch(platformCode){
+              case "1" : 
+              case "2" : 
+                field = "#adForm > div > div:nth-child(2) > div > div > div > div:nth-child(12)";
+                break;
+              case "3" : 
+                field = "#adForm > div > div:nth-child(2) > div > div > div > div:nth-child(13)"
+            }
+          case "CPE" : 
+          case "CPA" :
+          case "CPS" : 
+            switch(integrationType){
+              case "Web" : 
+                field = "#adForm > div > div:nth-child(2) > div > div > div > div:nth-child(11)";
+                break;
+              case "SDK" : 
+                field = "#adForm > div > div:nth-child(2) > div > div > div > div:nth-child(11)";
+                break;
+              case "3rdPartyTracker":
+                field = "#adForm > div > div:nth-child(2) > div > div > div > div:nth-child(13)";
+                break;
+            }
+          case "CPL" :
+             field = "#adForm > div > div:nth-child(2) > div > div > div > div:nth-child(13)";
+             break;
+          case "CPInsta" :
+          case "CPQ" :   
+          case "CPK" : 
+          case "CPYoutube" : 
+           field = "#adForm > div > div:nth-child(2) > div > div > div > div:nth-child(11)";                    
            break;
-          default : 
-           await this.fillField(field, landingType);
-           await this.wait(1)
-           await this.pressKey("Enter")
-           break;
-    
         }
-        await this.wait(1)
-        await this.pressKey('Enter');
+        
+        console.log("filed::::::::::::::::::::::::::::::::"+field);
+        
+        let landingTypeis 
+
+        if (landingType = 'CardView'){
+          landingTypeis = "Card View";
+        }else{
+          landingTypeis = landingType;
+        }
+
+        try{
+          this.waitForElement(field + " > div.multiselect.multiselect-wrapper.shrink > div.multiselect__tags > input", 3);
+          //this.fillField(field + " > div.multiselect.multiselect-wrapper.shrink > div.multiselect__tags > input", landingTypeis);
+          console.log("11111111111111111111111111111111111111111")
+        }catch{
+          this.waitForElement(field + " > div.multiselect.multiselect--above.multiselect-wrapper.shrink > div.multiselect__tags > input", 3);
+          //this.fillField(field + " > div.multiselect.multiselect--above.multiselect-wrapper.shrink > div.multiselect__tags > input", landingTypeis);
+          //this.fillField('#adForm > div > div:nth-child(2) > div > div > div > div:nth-child(13) > div.multiselect.multiselect-wrapper.shrink > div.multiselect__tags > span');
+          console.log("22222222222222222222222222222222222222222")
+        }finally{
+          await this.wait(1)
+          await this.pressKey("Enter")
+        }
       },
       
-    
       checkLandingType: async function(landingType){
         let actualLandingType = await this.grabTextFrom("body > div > section > div > div.view-container > div > section.content-container > div > div.row.form__containter > div.col-sm-7 > div > div > div:nth-child(13) > div > div.value")
         await assert.equal(landingType, actualLandingType.replace(/\n/g,""))
