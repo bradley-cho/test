@@ -190,10 +190,10 @@ When('Second Landing URL 입력 : 2ndLandingUrl = {word} when {word}', async(sec
  }
 });
 
-
+//Landing Type 입력
 When ('Landing Type 선택 : {word} when {word}, {word}, {word}', async(landingType, RevenueType, platformCode, integrationType) => {
   await console.log("Landing Type 선택")
-  StepProperity.setLandingType(landingType, RevenueType, platformCode, integrationType)
+ // StepProperity.setLandingType(landingType, RevenueType, platformCode, integrationType)
 });
 
 

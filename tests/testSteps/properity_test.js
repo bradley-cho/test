@@ -173,14 +173,17 @@ module.exports = function() {
         }
 
         try{
-          this.waitForElement(field + " > div.multiselect.multiselect-wrapper.shrink > div.multiselect__tags > input", 3);
-          //this.fillField(field + " > div.multiselect.multiselect-wrapper.shrink > div.multiselect__tags > input", landingTypeis);
           console.log("11111111111111111111111111111111111111111")
+          //this.waitForElement(field + " > div.multiselect.multiselect-wrapper.shrink > div.multiselect__tags > input", 3);
+          this.fillField(field + " > div.multiselect.multiselect--above.multiselect-wrapper.shrink > div.multiselect__tags > input", landingTypeis);
+          
         }catch{
-          this.waitForElement(field + " > div.multiselect.multiselect--above.multiselect-wrapper.shrink > div.multiselect__tags > input", 3);
+          console.log("22222222222222222222222222222222222222222")
+          this.fillField(field + " > div.multiselect.multiselect-wrapper.shrink > div.multiselect__tags > input", landingTypeis);
+          //this.waitForElement(field + " > div.multiselect.multiselect--above.multiselect-wrapper.shrink > div.multiselect__tags > input", 3);
           //this.fillField(field + " > div.multiselect.multiselect--above.multiselect-wrapper.shrink > div.multiselect__tags > input", landingTypeis);
           //this.fillField('#adForm > div > div:nth-child(2) > div > div > div > div:nth-child(13) > div.multiselect.multiselect-wrapper.shrink > div.multiselect__tags > span');
-          console.log("22222222222222222222222222222222222222222")
+          
         }finally{
           await this.wait(1)
           await this.pressKey("Enter")
