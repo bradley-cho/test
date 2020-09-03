@@ -322,7 +322,7 @@ When('CPS 셋팅 : shoppingCategory = {word}, originalPrice = {word}, discounted
 
 When ('Save 클릭', async() => {
   console.log("Save 클릭");
- // StepTearDown.clickSave()
+  StepTearDown.clickSave()
 });
 
 
