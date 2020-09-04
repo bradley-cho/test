@@ -1,0 +1,214 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 3,
+    "passes": 3,
+    "pending": 0,
+    "failures": 0,
+    "start": "2020-09-03T08:53:19.363Z",
+    "end": "2020-09-03T08:54:32.047Z",
+    "duration": 72684,
+    "testsRegistered": 3,
+    "passPercent": 100,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "e9f7d98f-6f9e-4ebf-99bd-7a97b69173e7",
+      "title": "",
+      "fullFile": "",
+      "file": "",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "cb28cd88-6675-40db-a3eb-1dfe88986afa",
+          "title": "Lineitem Creation",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [
+            {
+              "title": "\"before all\" hook: codeceptjs.beforeSuite",
+              "fullTitle": "Lineitem Creation \"before all\" hook: codeceptjs.beforeSuite",
+              "timedOut": false,
+              "duration": 1,
+              "state": null,
+              "speed": null,
+              "pass": false,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "scenario.suiteSetup(suite)",
+              "err": {},
+              "uuid": "0534cf6f-3e53-4a93-8fa3-fdd760717b1e",
+              "parentUUID": "cb28cd88-6675-40db-a3eb-1dfe88986afa",
+              "isHook": true,
+              "skipped": false
+            },
+            {
+              "title": "\"before each\" hook: codeceptjs.before",
+              "fullTitle": "Lineitem Creation \"before each\" hook: codeceptjs.before",
+              "timedOut": false,
+              "duration": 719,
+              "state": null,
+              "speed": null,
+              "pass": false,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "scenario.setup(suite)",
+              "err": {},
+              "uuid": "7de8d5b6-f0e3-45f9-8c62-c7e6cb96364b",
+              "parentUUID": "cb28cd88-6675-40db-a3eb-1dfe88986afa",
+              "isHook": true,
+              "skipped": false
+            }
+          ],
+          "afterHooks": [
+            {
+              "title": "\"after all\" hook: codeceptjs.afterSuite",
+              "fullTitle": "Lineitem Creation \"after all\" hook: codeceptjs.afterSuite",
+              "timedOut": false,
+              "duration": 0,
+              "state": null,
+              "speed": null,
+              "pass": false,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "scenario.suiteTeardown(suite)",
+              "err": {},
+              "uuid": "8f5adcb5-20dd-411c-aee7-74a15e214c71",
+              "parentUUID": "cb28cd88-6675-40db-a3eb-1dfe88986afa",
+              "isHook": true,
+              "skipped": false
+            },
+            {
+              "title": "\"after each\" hook: codeceptjs.after",
+              "fullTitle": "Lineitem Creation \"after each\" hook: codeceptjs.after",
+              "timedOut": false,
+              "duration": 396,
+              "state": null,
+              "speed": null,
+              "pass": false,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "scenario.teardown(suite)",
+              "err": {},
+              "uuid": "c56d1307-fc5d-4e2f-b568-6db96a931a1a",
+              "parentUUID": "cb28cd88-6675-40db-a3eb-1dfe88986afa",
+              "isHook": true,
+              "skipped": false
+            }
+          ],
+          "tests": [
+            {
+              "title": "라인아이템 생성 확인 {\"RevenueType\":\"CPC\",\"landingPoints\":\"20\",\"platformCode\":\"3\",\"CurrencyCode\":\"KRW\",\"totalBudget\":\"1000000\",\"dailyBudget\":\"20\",\"unitPrice\":\"20\",\"checkSafeBudget\":\"N\",\"safeBudget\":\"0\",\"checkReward\":\"Y\",\"rewardPeriod\":\"180\",\"actionInterval\":\"n/a\",\"packageName\":\"n/a\",\"URLScheme\":\"n/a\",\"launchPackage\":\"n/a\",\"integrationType\":\"n/a\",\"appId\":\"n/a\",\"thirdPartyTracker\":\"n/a\",\"eventName\":\"n/a\",\"landingType\":\"Browser\",\"facebooklink\":\"n/a\",\"facebookid\":\"n/a\",\"secondLandingUrl\":\"n/a\",\"instagramId\":\"n/a\",\"kakaoChnnel\":\"n/a\",\"chnnelId\":\"n/a\",\"shoppingCategory\":\"n/a\",\"originalPrice\":\"n/a\",\"discountedPrice\":\"n/a\",\"hot\":\"n/a\"}",
+              "fullTitle": "Lineitem Creation 라인아이템 생성 확인 {\"RevenueType\":\"CPC\",\"landingPoints\":\"20\",\"platformCode\":\"3\",\"CurrencyCode\":\"KRW\",\"totalBudget\":\"1000000\",\"dailyBudget\":\"20\",\"unitPrice\":\"20\",\"checkSafeBudget\":\"N\",\"safeBudget\":\"0\",\"checkReward\":\"Y\",\"rewardPeriod\":\"180\",\"actionInterval\":\"n/a\",\"packageName\":\"n/a\",\"URLScheme\":\"n/a\",\"launchPackage\":\"n/a\",\"integrationType\":\"n/a\",\"appId\":\"n/a\",\"thirdPartyTracker\":\"n/a\",\"eventName\":\"n/a\",\"landingType\":\"Browser\",\"facebooklink\":\"n/a\",\"facebookid\":\"n/a\",\"secondLandingUrl\":\"n/a\",\"instagramId\":\"n/a\",\"kakaoChnnel\":\"n/a\",\"chnnelId\":\"n/a\",\"shoppingCategory\":\"n/a\",\"originalPrice\":\"n/a\",\"discountedPrice\":\"n/a\",\"hot\":\"n/a\"}",
+              "timedOut": false,
+              "duration": 23236,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "runSteps(addExampleInTable(exampleSteps, current)",
+              "err": {},
+              "uuid": "435fdce0-2960-489b-a101-16de563a8bf2",
+              "parentUUID": "cb28cd88-6675-40db-a3eb-1dfe88986afa",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "라인아이템 생성 확인 {\"RevenueType\":\"CPM\",\"landingPoints\":\"8\",\"platformCode\":\"3\",\"CurrencyCode\":\"KRW\",\"totalBudget\":\"1000000\",\"dailyBudget\":\"20\",\"unitPrice\":\"8\",\"checkSafeBudget\":\"N\",\"safeBudget\":\"0\",\"checkReward\":\"Y\",\"rewardPeriod\":\"180\",\"actionInterval\":\"n/a\",\"packageName\":\"n/a\",\"URLScheme\":\"n/a\",\"launchPackage\":\"n/a\",\"integrationType\":\"n/a\",\"appId\":\"n/a\",\"thirdPartyTracker\":\"n/a\",\"eventName\":\"n/a\",\"landingType\":\"Browser\",\"facebooklink\":\"n/a\",\"facebookid\":\"n/a\",\"secondLandingUrl\":\"n/a\",\"instagramId\":\"n/a\",\"kakaoChnnel\":\"n/a\",\"chnnelId\":\"n/a\",\"shoppingCategory\":\"n/a\",\"originalPrice\":\"n/a\",\"discountedPrice\":\"n/a\",\"hot\":\"n/a\"}",
+              "fullTitle": "Lineitem Creation 라인아이템 생성 확인 {\"RevenueType\":\"CPM\",\"landingPoints\":\"8\",\"platformCode\":\"3\",\"CurrencyCode\":\"KRW\",\"totalBudget\":\"1000000\",\"dailyBudget\":\"20\",\"unitPrice\":\"8\",\"checkSafeBudget\":\"N\",\"safeBudget\":\"0\",\"checkReward\":\"Y\",\"rewardPeriod\":\"180\",\"actionInterval\":\"n/a\",\"packageName\":\"n/a\",\"URLScheme\":\"n/a\",\"launchPackage\":\"n/a\",\"integrationType\":\"n/a\",\"appId\":\"n/a\",\"thirdPartyTracker\":\"n/a\",\"eventName\":\"n/a\",\"landingType\":\"Browser\",\"facebooklink\":\"n/a\",\"facebookid\":\"n/a\",\"secondLandingUrl\":\"n/a\",\"instagramId\":\"n/a\",\"kakaoChnnel\":\"n/a\",\"chnnelId\":\"n/a\",\"shoppingCategory\":\"n/a\",\"originalPrice\":\"n/a\",\"discountedPrice\":\"n/a\",\"hot\":\"n/a\"}",
+              "timedOut": false,
+              "duration": 22867,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "runSteps(addExampleInTable(exampleSteps, current)",
+              "err": {},
+              "uuid": "73802db5-1d13-4f13-95f2-e0317ada4af3",
+              "parentUUID": "cb28cd88-6675-40db-a3eb-1dfe88986afa",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "라인아이템 생성 확인 {\"RevenueType\":\"CPI\",\"landingPoints\":\"20\",\"platformCode\":\"3\",\"CurrencyCode\":\"KRW\",\"totalBudget\":\"1000000\",\"dailyBudget\":\"20\",\"unitPrice\":\"20\",\"checkSafeBudget\":\"N\",\"safeBudget\":\"0\",\"checkReward\":\"Y\",\"rewardPeriod\":\"180\",\"actionInterval\":\"n/a\",\"packageName\":\"com.susoft.CJONmart\",\"URLScheme\":\"cjthemarket://\",\"launchPackage\":\"On\",\"integrationType\":\"n/a\",\"appId\":\"n/a\",\"thirdPartyTracker\":\"n/a\",\"eventName\":\"n/a\",\"landingType\":\"Browser\",\"facebooklink\":\"n/a\",\"facebookid\":\"n/a\",\"secondLandingUrl\":\"n/a\",\"instagramId\":\"n/a\",\"kakaoChnnel\":\"n/a\",\"chnnelId\":\"n/a\",\"shoppingCategory\":\"n/a\",\"originalPrice\":\"n/a\",\"discountedPrice\":\"n/a\",\"hot\":\"n/a\"}",
+              "fullTitle": "Lineitem Creation 라인아이템 생성 확인 {\"RevenueType\":\"CPI\",\"landingPoints\":\"20\",\"platformCode\":\"3\",\"CurrencyCode\":\"KRW\",\"totalBudget\":\"1000000\",\"dailyBudget\":\"20\",\"unitPrice\":\"20\",\"checkSafeBudget\":\"N\",\"safeBudget\":\"0\",\"checkReward\":\"Y\",\"rewardPeriod\":\"180\",\"actionInterval\":\"n/a\",\"packageName\":\"com.susoft.CJONmart\",\"URLScheme\":\"cjthemarket://\",\"launchPackage\":\"On\",\"integrationType\":\"n/a\",\"appId\":\"n/a\",\"thirdPartyTracker\":\"n/a\",\"eventName\":\"n/a\",\"landingType\":\"Browser\",\"facebooklink\":\"n/a\",\"facebookid\":\"n/a\",\"secondLandingUrl\":\"n/a\",\"instagramId\":\"n/a\",\"kakaoChnnel\":\"n/a\",\"chnnelId\":\"n/a\",\"shoppingCategory\":\"n/a\",\"originalPrice\":\"n/a\",\"discountedPrice\":\"n/a\",\"hot\":\"n/a\"}",
+              "timedOut": false,
+              "duration": 22827,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "runSteps(addExampleInTable(exampleSteps, current)",
+              "err": {},
+              "uuid": "d19df78f-4c1b-4361-9647-750f45a6b1fd",
+              "parentUUID": "cb28cd88-6675-40db-a3eb-1dfe88986afa",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "435fdce0-2960-489b-a101-16de563a8bf2",
+            "73802db5-1d13-4f13-95f2-e0317ada4af3",
+            "d19df78f-4c1b-4361-9647-750f45a6b1fd"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 68930,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 0
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 0
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "8.1.3"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": true,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "6.1.1"
+    },
+    "marge": {
+      "options": {
+        "reportDir": "output"
+      },
+      "version": "5.1.0"
+    }
+  }
+}

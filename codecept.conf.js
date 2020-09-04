@@ -2,8 +2,8 @@ exports.config = {
   output: './output',
   helpers: {
     Puppeteer: {
-      url: 'https://dashboard-staging.buzzvil.com/',
-      show: true,
+      url: 'https://dashboard-stagingqa.buzzvil.com/',
+     // show: true,
       windowSize: '1800X1600'
     }
     // ,
@@ -20,7 +20,8 @@ exports.config = {
     StepPlacement:'./tests/testSteps/placement_test.js',
     StepTearDown:'./tests/testSteps/tearDown_test.js',
     StepDataValodation:'./tests/testSteps/dataValidation.js',
-    StepCPSSetting:'./tests/testSteps/CPSSetting_test.js'
+    StepCPSSetting:'./tests/testSteps/CPSSetting_test.js',
+    TestLinkAsync:'./testlink/testlink.js'
   },
   mocha: {
     "reporterOptions": {

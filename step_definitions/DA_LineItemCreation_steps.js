@@ -464,3 +464,8 @@ Then('Exclude Unit 확인', async() =>{
 Then('Targeting 확인', async() =>{
   console.log("Targeting 확인")
 });
+
+
+// Then("결과 전송 to {word}", async(CaseId) =>{
+//   TestLinkAsync();
+// });
