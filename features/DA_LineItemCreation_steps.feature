@@ -3,9 +3,10 @@ Feature: Lineitem Creation
   As a 스텝
   I want to be able to 오류 없이 라인 아이템을 생성
 
-  Scenario Outline: 라인아이템 생성 확인
-  Given Direct Sales 페이지로 이동
-   When ID 입력
+  Scenario Outline: 라인아이템 생성 확인 
+  Given 라인아이템 생성을 확인한다 <CaseId>
+   When Direct Sales 페이지로 이동
+    And ID 입력
     And Password 입력
     And 확인 버튼 클릭
     And Direct Sales >> Ads 페이지로 이동
@@ -67,8 +68,8 @@ Feature: Lineitem Creation
    
    Examples:
         | CaseId | RevenueType | landingPoints | platformCode  | CurrencyCode  | totalBudget | dailyBudget | unitPrice | checkSafeBudget | safeBudget | checkReward |  rewardPeriod | actionInterval     | packageName         | URLScheme      | launchPackage | integrationType   | appId  | thirdPartyTracker | eventName | landingType | facebooklink                | facebookid |secondLandingUrl              | instagramId                   | kakaoChnnel | chnnelId | shoppingCategory | originalPrice | discountedPrice | hot | 
-        | CaseId | CPC         | 20            | 3             | KRW           | 1000000     | 20          | 20        |  N              |  0         |  Y          | 180           | n/a                | n/a                 | n/a            | n/a           | n/a               | n/a    | n/a               | n/a       | Browser     | n/a                         | n/a        | n/a                          | n/a                           | n/a         | n/a      | n/a              | n/a           | n/a             | n/a |
-        # | CaseId | CPC         | 8             | 3             | KRW           | 1000000     | 8           | 8         |  N              |  0         |  Y          | 180           | n/a                | n/a                 | n/a            | n/a           | n/a               | n/a    | n/a               | n/a       | Browser     | n/a                         | n/a        | n/a                          | n/a                           | n/a         | n/a      | n/a              | n/a           | n/a             | n/a |
+        | 000001 | CPC         | 20            | 3             | KRW           | 1000000     | 20          | 20        |  N              |  0         |  Y          | 180           | n/a                | n/a                 | n/a            | n/a           | n/a               | n/a    | n/a               | n/a       | Browser     | n/a                         | n/a        | n/a                          | n/a                           | n/a         | n/a      | n/a              | n/a           | n/a             | n/a |
+        | 000002 | CPC         | 8             | 3             | KRW           | 1000000     | 8           | 8         |  N              |  0         |  Y          | 180           | n/a                | n/a                 | n/a            | n/a           | n/a               | n/a    | n/a               | n/a       | Browser     | n/a                         | n/a        | n/a                          | n/a                           | n/a         | n/a      | n/a              | n/a           | n/a             | n/a |
         # | CaseId | CPM         | 8             | 3             | KRW           | 1000000     | 20          | 8         |  N              |  0         |  Y          | 180           | n/a                | n/a                 | n/a            | n/a           | n/a               | n/a    | n/a               | n/a       | Browser     | n/a                         | n/a        | n/a                          | n/a                           | n/a         | n/a      | n/a              | n/a           | n/a             | n/a |
         # | CaseId | CPI         | 20            | 3             | KRW           | 1000000     | 20          | 20        |  N              |  0         |  Y          | 180           | n/a                | com.susoft.CJONmart | cjthemarket:// | On            | n/a               | n/a    | n/a               | n/a       | Browser     | n/a                         | n/a        | n/a                          | n/a                           | n/a         | n/a      | n/a              | n/a           | n/a             | n/a |
         # | CaseId | CPE         | 20            | 1             | KRW           | 1000000     | 20          | 20        |  N              |  0         |  Y          | 180           | n/a                | n/a                 | n/a            | n/a           | SDK               | test   | n/a               | n/a       | Browser     | n/a                         | n/a        | n/a                          | n/a                           | n/a         | n/a      | n/a              | n/a           | n/a             | n/a |

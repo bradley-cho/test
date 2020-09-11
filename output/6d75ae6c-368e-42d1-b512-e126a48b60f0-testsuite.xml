@@ -1,0 +1,619 @@
+<?xml version='1.0'?>
+<ns2:test-suite xmlns:ns2='urn:model.allure.qatools.yandex.ru' start='1599207407043' stop='1599207428294'>
+    <name>Lineitem Creation</name>
+    <title>Lineitem Creation</title>
+    <test-cases>
+        <test-case start='1599207407044' status='passed' stop='1599207428099'>
+            <name>라인아이템 생성 확인 {"CaseId":"CaseId","RevenueType":"CPC","landingPoints":"20","platformCode":"3","CurrencyCode":"KRW","totalBudget":"1000000","dailyBudget":"20","unitPrice":"20","checkSafeBudget":"N","safeBudget":"0","checkReward":"Y","rewardPeriod":"180","actionInterval":"n/a","packageName":"n/a","URLScheme":"n/a","launchPackage":"n/a","integrationType":"n/a","appId":"n/a","thirdPartyTracker":"n/a","eventName":"n/a","landingType":"Browser","facebooklink":"n/a","facebookid":"n/a","secondLandingUrl":"n/a","instagramId":"n/a","kakaoChnnel":"n/a","chnnelId":"n/a","shoppingCategory":"n/a","originalPrice":"n/a","discountedPrice":"n/a","hot":"n/a"}</name>
+            <title>라인아이템 생성 확인 {"CaseId":"CaseId","RevenueType":"CPC","landingPoints":"20","platformCode":"3","CurrencyCode":"KRW","totalBudget":"1000000","dailyBudget":"20","unitPrice":"20","checkSafeBudget":"N","safeBudget":"0","checkReward":"Y","rewardPeriod":"180","actionInterval":"n/a","packageName":"n/a","URLScheme":"n/a","launchPackage":"n/a","integrationType":"n/a","appId":"n/a","thirdPartyTracker":"n/a","eventName":"n/a","landingType":"Browser","facebooklink":"n/a","facebookid":"n/a","secondLandingUrl":"n/a","instagramId":"n/a","kakaoChnnel":"n/a","chnnelId":"n/a","shoppingCategory":"n/a","originalPrice":"n/a","discountedPrice":"n/a","hot":"n/a"}</title>
+            <labels/>
+            <parameters/>
+            <steps>
+                <step start='1599207407514' status='passed' stop='1599207408490'>
+                    <name>Given Direct Sales 페이지로 이동 </name>
+                    <title>Given Direct Sales 페이지로 이동 </title>
+                    <attachments/>
+                    <steps>
+                        <step start='1599207407514' status='passed' stop='1599207408472'>
+                            <name>I am on page "https://dashboard-stagingqa.buzzvil.com/campaign/direct_sales/ads/"</name>
+                            <title>I am on page "https://dashboard-stagingqa.buzzvil.com/campaign/direct_sales/ads/"</title>
+                            <attachments/>
+                            <steps/>
+                        </step>
+                    </steps>
+                </step>
+                <step start='1599207408490' status='passed' stop='1599207409452'>
+                    <name>When ID 입력 </name>
+                    <title>When ID 입력 </title>
+                    <attachments/>
+                    <steps>
+                        <step start='1599207408490' status='passed' stop='1599207409452'>
+                            <name>StepLogin: enterId </name>
+                            <title>StepLogin: enterId </title>
+                            <attachments/>
+                            <steps>
+                                <step start='1599207408490' status='passed' stop='1599207409451'>
+                                    <name>I fill field "body > div > form > label:nth-child(2) > input", "bradley.cho@buzzvil.com"</name>
+                                    <title>I fill field "body > div > form > label:nth-child(2) > input", "bradley.cho@buzzvil.com"</title>
+                                    <attachments/>
+                                    <steps/>
+                                </step>
+                            </steps>
+                        </step>
+                    </steps>
+                </step>
+                <step start='1599207409452' status='passed' stop='1599207409799'>
+                    <name>And Password 입력 </name>
+                    <title>And Password 입력 </title>
+                    <attachments/>
+                    <steps>
+                        <step start='1599207409452' status='passed' stop='1599207409799'>
+                            <name>StepLogin: enterPassword </name>
+                            <title>StepLogin: enterPassword </title>
+                            <attachments/>
+                            <steps>
+                                <step start='1599207409452' status='passed' stop='1599207409799'>
+                                    <name>I fill field "body > div > form > label:nth-child(3) > input", "@NGEqUCNt27jxPR"</name>
+                                    <title>I fill field "body > div > form > label:nth-child(3) > input", "@NGEqUCNt27jxPR"</title>
+                                    <attachments/>
+                                    <steps/>
+                                </step>
+                            </steps>
+                        </step>
+                    </steps>
+                </step>
+                <step start='1599207409799' status='passed' stop='1599207409930'>
+                    <name>And 확인 버튼 클릭 </name>
+                    <title>And 확인 버튼 클릭 </title>
+                    <attachments/>
+                    <steps>
+                        <step start='1599207409799' status='passed' stop='1599207409930'>
+                            <name>StepLogin: clickSubmit </name>
+                            <title>StepLogin: clickSubmit </title>
+                            <attachments/>
+                            <steps>
+                                <step start='1599207409799' status='passed' stop='1599207409930'>
+                                    <name>I click "body > div > form > div > button"</name>
+                                    <title>I click "body > div > form > div > button"</title>
+                                    <attachments/>
+                                    <steps/>
+                                </step>
+                            </steps>
+                        </step>
+                    </steps>
+                </step>
+                <step start='1599207409930' status='passed' stop='1599207413136'>
+                    <name>And Direct Sales >> Ads 페이지로 이동 </name>
+                    <title>And Direct Sales >> Ads 페이지로 이동 </title>
+                    <attachments/>
+                    <steps>
+                        <step start='1599207409930' status='passed' stop='1599207413136'>
+                            <name>StepLogin: movetoAds </name>
+                            <title>StepLogin: movetoAds </title>
+                            <attachments/>
+                            <steps>
+                                <step start='1599207409930' status='passed' stop='1599207411981'>
+                                    <name>I wait for element "body > div > section > div > div.view-container > div > section.header > div > div > div > button > span", 5</name>
+                                    <title>I wait for element "body > div > section > div > div.view-container > div > section.header > div > div > div > button > span", 5</title>
+                                    <attachments/>
+                                    <steps/>
+                                </step>
+                                <step start='1599207411981' status='passed' stop='1599207412436'>
+                                    <name>I click "body > div > section > div > div.view-container > div > section.header > div > div > div > button > span"</name>
+                                    <title>I click "body > div > section > div > div.view-container > div > section.header > div > div > div > button > span"</title>
+                                    <attachments/>
+                                    <steps/>
+                                </step>
+                                <step start='1599207412436' status='passed' stop='1599207413136'>
+                                    <name>I click "body > div > section > div > div.view-container > div > section.header > div > div > div > div > div > a:nth-child(2)"</name>
+                                    <title>I click "body > div > section > div > div.view-container > div > section.header > div > div > div > div > div > a:nth-child(2)"</title>
+                                    <attachments/>
+                                    <steps/>
+                                </step>
+                            </steps>
+                        </step>
+                    </steps>
+                </step>
+                <step start='1599207413136' status='passed' stop='1599207414267'>
+                    <name>And Name CPC Regression_Test 입력 </name>
+                    <title>And Name CPC Regression_Test 입력 </title>
+                    <attachments/>
+                    <steps>
+                        <step start='1599207413136' status='passed' stop='1599207414267'>
+                            <name>StepProperity: name </name>
+                            <title>StepProperity: name </title>
+                            <attachments/>
+                            <steps>
+                                <step start='1599207413136' status='passed' stop='1599207414267'>
+                                    <name>I fill field "item_name", "CPC_Regression_Test"</name>
+                                    <title>I fill field "item_name", "CPC_Regression_Test"</title>
+                                    <attachments/>
+                                    <steps/>
+                                </step>
+                            </steps>
+                        </step>
+                    </steps>
+                </step>
+                <step start='1599207414267' status='passed' stop='1599207415575'>
+                    <name>And CPC 입력 </name>
+                    <title>And CPC 입력 </title>
+                    <attachments/>
+                    <steps>
+                        <step start='1599207414267' status='passed' stop='1599207415575'>
+                            <name>StepProperity: revenueType </name>
+                            <title>StepProperity: revenueType </title>
+                            <attachments/>
+                            <steps>
+                                <step start='1599207414267' status='passed' stop='1599207414435'>
+                                    <name>I fill field "#adForm > div > div:nth-child(2) > div > div > div > div:nth-child(3) > div.multiselect.multiselect-wrapper.shrink > div.multiselect__tags > input", "CPC"</name>
+                                    <title>I fill field "#adForm > div > div:nth-child(2) > div > div > div > div:nth-child(3) > div.multiselect.multiselect-wrapper.shrink > div.multiselect__tags > input", "CPC"</title>
+                                    <attachments/>
+                                    <steps/>
+                                </step>
+                                <step start='1599207414436' status='passed' stop='1599207415436'>
+                                    <name>I wait 1</name>
+                                    <title>I wait 1</title>
+                                    <attachments/>
+                                    <steps/>
+                                </step>
+                                <step start='1599207415437' status='passed' stop='1599207415547'>
+                                    <name>I press key "Enter"</name>
+                                    <title>I press key "Enter"</title>
+                                    <attachments/>
+                                    <steps/>
+                                </step>
+                            </steps>
+                        </step>
+                    </steps>
+                </step>
+                <step start='1599207415575' status='passed' stop='1599207417668'>
+                    <name>And Platform 선택 : 3 </name>
+                    <title>And Platform 선택 : 3 </title>
+                    <attachments/>
+                    <steps>
+                        <step start='1599207415575' status='passed' stop='1599207417668'>
+                            <name>StepProperity: setPlatform </name>
+                            <title>StepProperity: setPlatform </title>
+                            <attachments/>
+                            <steps>
+                                <step start='1599207415575' status='passed' stop='1599207417668'>
+                                    <name>I click "Android &amp; iOS"</name>
+                                    <title>I click "Android &amp; iOS"</title>
+                                    <attachments/>
+                                    <steps/>
+                                </step>
+                            </steps>
+                        </step>
+                    </steps>
+                </step>
+                <step start='1599207417668' status='passed' stop='1599207417806'>
+                    <name>And Currency 입력 : KRW </name>
+                    <title>And Currency 입력 : KRW </title>
+                    <attachments/>
+                    <steps>
+                        <step start='1599207417668' status='passed' stop='1599207417806'>
+                            <name>StepBudget: setCurrency </name>
+                            <title>StepBudget: setCurrency </title>
+                            <attachments/>
+                            <steps>
+                                <step start='1599207417668' status='passed' stop='1599207417791'>
+                                    <name>I click "#adForm > div > div:nth-child(3) > div > div:nth-child(2) > div > div > div.multiselect.multiselect-wrapper.shrink > div.multiselect__tags"</name>
+                                    <title>I click "#adForm > div > div:nth-child(3) > div > div:nth-child(2) > div > div > div.multiselect.multiselect-wrapper.shrink > div.multiselect__tags"</title>
+                                    <attachments/>
+                                    <steps/>
+                                </step>
+                            </steps>
+                        </step>
+                    </steps>
+                </step>
+                <step start='1599207417806' status='passed' stop='1599207418645'>
+                    <name>And Budget 입력 : totalBudget=1000000, dailyBudget=20, unitPrice=20 </name>
+                    <title>And Budget 입력 : totalBudget=1000000, dailyBudget=20, unitPrice=20 </title>
+                    <attachments/>
+                    <steps>
+                        <step start='1599207417806' status='passed' stop='1599207418645'>
+                            <name>StepBudget: setBudget </name>
+                            <title>StepBudget: setBudget </title>
+                            <attachments/>
+                            <steps>
+                                <step start='1599207417806' status='passed' stop='1599207418244'>
+                                    <name>I fill field "#adForm > div > div:nth-child(3) > div > div:nth-child(3) > div > div:nth-child(2) > div.input-group > input", 1000000</name>
+                                    <title>I fill field "#adForm > div > div:nth-child(3) > div > div:nth-child(3) > div > div:nth-child(2) > div.input-group > input", 1000000</title>
+                                    <attachments/>
+                                    <steps/>
+                                </step>
+                                <step start='1599207418244' status='passed' stop='1599207418438'>
+                                    <name>I fill field "#adForm > div > div:nth-child(3) > div > div:nth-child(3) > div > div:nth-child(3) > div.input-group > input", 20</name>
+                                    <title>I fill field "#adForm > div > div:nth-child(3) > div > div:nth-child(3) > div > div:nth-child(3) > div.input-group > input", 20</title>
+                                    <attachments/>
+                                    <steps/>
+                                </step>
+                                <step start='1599207418438' status='passed' stop='1599207418644'>
+                                    <name>I fill field "#adForm > div > div:nth-child(3) > div > div:nth-child(3) > div > div:nth-child(4) > div.input-group > input", 20</name>
+                                    <title>I fill field "#adForm > div > div:nth-child(3) > div > div:nth-child(3) > div > div:nth-child(4) > div.input-group > input", 20</title>
+                                    <attachments/>
+                                    <steps/>
+                                </step>
+                            </steps>
+                        </step>
+                    </steps>
+                </step>
+                <step start='1599207418645' status='passed' stop='1599207418652'>
+                    <name>And Safe Budget 입력 : checkSafeBudget=N, safeBudget=0 </name>
+                    <title>And Safe Budget 입력 : checkSafeBudget=N, safeBudget=0 </title>
+                    <attachments/>
+                    <steps>
+                        <step start='1599207418645' status='passed' stop='1599207418652'>
+                            <name>StepBudget: setSafeBudget </name>
+                            <title>StepBudget: setSafeBudget </title>
+                            <attachments/>
+                            <steps>
+                                <step start='1599207418645' status='passed' stop='1599207418651'>
+                                    <name>I uncheck option "#adForm > div > div:nth-child(3) > div > div:nth-child(3) > div > div:nth-child(5) > div > div.togglable__toggle > input[type=checkbox]"</name>
+                                    <title>I uncheck option "#adForm > div > div:nth-child(3) > div > div:nth-child(3) > div > div:nth-child(5) > div > div.togglable__toggle > input[type=checkbox]"</title>
+                                    <attachments/>
+                                    <steps/>
+                                </step>
+                            </steps>
+                        </step>
+                    </steps>
+                </step>
+                <step start='1599207418652' status='passed' stop='1599207419194'>
+                    <name>And Reward 입력 : checkReward=Y, landingPoints=20, rewardPeriod=180, actionInterval=n/a when CPC </name>
+                    <title>And Reward 입력 : checkReward=Y, landingPoints=20, rewardPeriod=180, actionInterval=n/a when CPC </title>
+                    <attachments/>
+                    <steps>
+                        <step start='1599207418652' status='passed' stop='1599207419194'>
+                            <name>StepBudget: setReward </name>
+                            <title>StepBudget: setReward </title>
+                            <attachments/>
+                            <steps>
+                                <step start='1599207418652' status='passed' stop='1599207418657'>
+                                    <name>I grab text from "#adForm > div > div:nth-child(3) > div > div:nth-child(3) > div > div:nth-child(6) > div:nth-child(2) > label > span", "span"</name>
+                                    <title>I grab text from "#adForm > div > div:nth-child(3) > div > div:nth-child(3) > div > div:nth-child(6) > div:nth-child(2) > label > span", "span"</title>
+                                    <attachments/>
+                                    <steps/>
+                                </step>
+                                <step start='1599207418710' status='passed' stop='1599207418948'>
+                                    <name>I fill field "#adForm > div > div:nth-child(3) > div > div:nth-child(3) > div > div:nth-child(7) > div.input-group > input", "20"</name>
+                                    <title>I fill field "#adForm > div > div:nth-child(3) > div > div:nth-child(3) > div > div:nth-child(7) > div.input-group > input", "20"</title>
+                                    <attachments/>
+                                    <steps/>
+                                </step>
+                                <step start='1599207418948' status='passed' stop='1599207419194'>
+                                    <name>I fill field "reward_period", "180"</name>
+                                    <title>I fill field "reward_period", "180"</title>
+                                    <attachments/>
+                                    <steps/>
+                                </step>
+                            </steps>
+                        </step>
+                    </steps>
+                </step>
+                <step start='1599207419194' status='passed' stop='1599207419343'>
+                    <name>And Display Type 선택 when CPC </name>
+                    <title>And Display Type 선택 when CPC </title>
+                    <attachments/>
+                    <steps>
+                        <step start='1599207419194' status='passed' stop='1599207419343'>
+                            <name>StepAllocation: displayType </name>
+                            <title>StepAllocation: displayType </title>
+                            <attachments/>
+                            <steps>
+                                <step start='1599207419194' status='passed' stop='1599207419343'>
+                                    <name>I click "#adForm > div > div:nth-child(4) > div > div > div.col-sm-12.col-md-5 > div > div > div:nth-child(2) > div:nth-child(2) > label"</name>
+                                    <title>I click "#adForm > div > div:nth-child(4) > div > div > div.col-sm-12.col-md-5 > div > div > div:nth-child(2) > div:nth-child(2) > label"</title>
+                                    <attachments/>
+                                    <steps/>
+                                </step>
+                            </steps>
+                        </step>
+                    </steps>
+                </step>
+                <step start='1599207419343' status='passed' stop='1599207419468'>
+                    <name>And Display Weight 입력 when CPC </name>
+                    <title>And Display Weight 입력 when CPC </title>
+                    <attachments/>
+                    <steps>
+                        <step start='1599207419343' status='passed' stop='1599207419468'>
+                            <name>StepAllocation: displayWeight </name>
+                            <title>StepAllocation: displayWeight </title>
+                            <attachments/>
+                            <steps>
+                                <step start='1599207419343' status='passed' stop='1599207419350'>
+                                    <name>I check option "#adForm > div > div:nth-child(4) > div > div > div.col-sm-12.col-md-5 > div > div > div:nth-child(3) > div > div.togglable__toggle > input[type=checkbox]"</name>
+                                    <title>I check option "#adForm > div > div:nth-child(4) > div > div > div.col-sm-12.col-md-5 > div > div > div:nth-child(3) > div > div.togglable__toggle > input[type=checkbox]"</title>
+                                    <attachments/>
+                                    <steps/>
+                                </step>
+                                <step start='1599207419350' status='passed' stop='1599207419468'>
+                                    <name>I fill field "display_weight", </name>
+                                    <title>I fill field "display_weight", </title>
+                                    <attachments/>
+                                    <steps/>
+                                </step>
+                            </steps>
+                        </step>
+                    </steps>
+                </step>
+                <step start='1599207419468' status='passed' stop='1599207419616'>
+                    <name>And IPU, DIPU, TIPU 입력 when CPC </name>
+                    <title>And IPU, DIPU, TIPU 입력 when CPC </title>
+                    <attachments/>
+                    <steps>
+                        <step start='1599207419468' status='passed' stop='1599207419616'>
+                            <name>StepAllocation: ipu </name>
+                            <title>StepAllocation: ipu </title>
+                            <attachments/>
+                            <steps>
+                                <step start='1599207419468' status='passed' stop='1599207419615'>
+                                    <name>I uncheck option "#adForm > div > div:nth-child(4) > div > div > div.col-sm-12.col-md-5 > div > div > div:nth-child(4) > div > div.togglable__toggle > input[type=checkbox]"</name>
+                                    <title>I uncheck option "#adForm > div > div:nth-child(4) > div > div > div.col-sm-12.col-md-5 > div > div > div:nth-child(4) > div > div.togglable__toggle > input[type=checkbox]"</title>
+                                    <attachments/>
+                                    <steps/>
+                                </step>
+                            </steps>
+                        </step>
+                    </steps>
+                </step>
+                <step start='1599207419616' status='passed' stop='1599207419621'>
+                    <name>And CPU, DCPU, TCPU 입력 when CPC </name>
+                    <title>And CPU, DCPU, TCPU 입력 when CPC </title>
+                    <attachments/>
+                    <steps>
+                        <step start='1599207419616' status='passed' stop='1599207419621'>
+                            <name>StepAllocation: cpu </name>
+                            <title>StepAllocation: cpu </title>
+                            <attachments/>
+                            <steps>
+                                <step start='1599207419616' status='passed' stop='1599207419621'>
+                                    <name>I uncheck option "#adForm > div > div:nth-child(4) > div > div > div.col-sm-12.col-md-5 > div > div > div:nth-child(5) > div > div.togglable__toggle > input[type=checkbox]"</name>
+                                    <title>I uncheck option "#adForm > div > div:nth-child(4) > div > div > div.col-sm-12.col-md-5 > div > div > div:nth-child(5) > div > div.togglable__toggle > input[type=checkbox]"</title>
+                                    <attachments/>
+                                    <steps/>
+                                </step>
+                            </steps>
+                        </step>
+                    </steps>
+                </step>
+                <step start='1599207419621' status='passed' stop='1599207423290'>
+                    <name>And Include Group 입력 when CPC </name>
+                    <title>And Include Group 입력 when CPC </title>
+                    <attachments/>
+                    <steps>
+                        <step start='1599207419621' status='passed' stop='1599207423290'>
+                            <name>StepPlacement: includeGroup </name>
+                            <title>StepPlacement: includeGroup </title>
+                            <attachments/>
+                            <steps>
+                                <step start='1599207419621' status='passed' stop='1599207420148'>
+                                    <name>I fill field "#adForm > div > div:nth-child(5) > div > div > div > div > div.group-unit__container > div:nth-child(2) > div > div > div.multiselect__tags > input", "Test_Unit_Group_Brad_AOS"</name>
+                                    <title>I fill field "#adForm > div > div:nth-child(5) > div > div > div > div > div.group-unit__container > div:nth-child(2) > div > div > div.multiselect__tags > input", "Test_Unit_Group_Brad_AOS"</title>
+                                    <attachments/>
+                                    <steps/>
+                                </step>
+                                <step start='1599207420148' status='passed' stop='1599207423151'>
+                                    <name>I wait 3</name>
+                                    <title>I wait 3</title>
+                                    <attachments/>
+                                    <steps/>
+                                </step>
+                                <step start='1599207423151' status='passed' stop='1599207423290'>
+                                    <name>I press key ["Enter"]</name>
+                                    <title>I press key ["Enter"]</title>
+                                    <attachments/>
+                                    <steps/>
+                                </step>
+                            </steps>
+                        </step>
+                    </steps>
+                </step>
+                <step start='1599207423290' status='passed' stop='1599207423424'>
+                    <name>And Save 클릭 </name>
+                    <title>And Save 클릭 </title>
+                    <attachments/>
+                    <steps>
+                        <step start='1599207423290' status='passed' stop='1599207423424'>
+                            <name>StepTearDown: clickSave </name>
+                            <title>StepTearDown: clickSave </title>
+                            <attachments/>
+                            <steps>
+                                <step start='1599207423290' status='passed' stop='1599207423424'>
+                                    <name>I click "Save"</name>
+                                    <title>I click "Save"</title>
+                                    <attachments/>
+                                    <steps/>
+                                </step>
+                            </steps>
+                        </step>
+                    </steps>
+                </step>
+                <step start='1599207423424' status='passed' stop='1599207426858'>
+                    <name>Then Detail 페이지로 이동 </name>
+                    <title>Then Detail 페이지로 이동 </title>
+                    <attachments/>
+                    <steps>
+                        <step start='1599207423424' status='passed' stop='1599207426858'>
+                            <name>StepLogin: moveToLineitemDetailPage </name>
+                            <title>StepLogin: moveToLineitemDetailPage </title>
+                            <attachments/>
+                            <steps>
+                                <step start='1599207423424' status='passed' stop='1599207426424'>
+                                    <name>I wait 3</name>
+                                    <title>I wait 3</title>
+                                    <attachments/>
+                                    <steps/>
+                                </step>
+                                <step start='1599207426425' status='passed' stop='1599207426428'>
+                                    <name>I grab current url </name>
+                                    <title>I grab current url </title>
+                                    <attachments/>
+                                    <steps/>
+                                </step>
+                                <step start='1599207426442' status='passed' stop='1599207426858'>
+                                    <name>I am on page "https://dashboard-stagingqa.buzzvil.com/campaign/direct_sales/ads/1748462/detail"</name>
+                                    <title>I am on page "https://dashboard-stagingqa.buzzvil.com/campaign/direct_sales/ads/1748462/detail"</title>
+                                    <attachments/>
+                                    <steps/>
+                                </step>
+                            </steps>
+                        </step>
+                    </steps>
+                </step>
+                <step start='1599207426858' status='passed' stop='1599207428054'>
+                    <name>And Revenue type 확인 : CPC </name>
+                    <title>And Revenue type 확인 : CPC </title>
+                    <attachments/>
+                    <steps>
+                        <step start='1599207426858' status='passed' stop='1599207428054'>
+                            <name>StepProperity: checkRevenueType </name>
+                            <title>StepProperity: checkRevenueType </title>
+                            <attachments/>
+                            <steps>
+                                <step start='1599207426858' status='passed' stop='1599207428054'>
+                                    <name>I grab text from "body > div > section > div > div.view-container > div > section.content-container > div > div.row.form__containter > div.col-sm-7 > div > div > div:nth-child(2) > div > div.value"</name>
+                                    <title>I grab text from "body > div > section > div > div.view-container > div > section.content-container > div > div.row.form__containter > div.col-sm-7 > div > div > div:nth-child(2) > div > div.value"</title>
+                                    <attachments/>
+                                    <steps/>
+                                </step>
+                            </steps>
+                        </step>
+                    </steps>
+                </step>
+                <step start='1599207428054' status='passed' stop='1599207428060'>
+                    <name>And Name 확인 : CPC </name>
+                    <title>And Name 확인 : CPC </title>
+                    <attachments/>
+                    <steps>
+                        <step start='1599207428054' status='passed' stop='1599207428060'>
+                            <name>StepProperity: checkName </name>
+                            <title>StepProperity: checkName </title>
+                            <attachments/>
+                            <steps>
+                                <step start='1599207428054' status='passed' stop='1599207428060'>
+                                    <name>I grab text from "body > div > section > div > div.view-container > div > section.content-container > div > div.row.form__containter > div.col-sm-7 > div > div > div:nth-child(1) > div > div.value"</name>
+                                    <title>I grab text from "body > div > section > div > div.view-container > div > section.content-container > div > div.row.form__containter > div.col-sm-7 > div > div > div:nth-child(1) > div > div.value"</title>
+                                    <attachments/>
+                                    <steps/>
+                                </step>
+                            </steps>
+                        </step>
+                    </steps>
+                </step>
+                <step start='1599207428060' status='passed' stop='1599207428066'>
+                    <name>And Test : off, Backfill : off, Lockscreen : On, Offerwall : Off 확인 </name>
+                    <title>And Test : off, Backfill : off, Lockscreen : On, Offerwall : Off 확인 </title>
+                    <attachments/>
+                    <steps>
+                        <step start='1599207428060' status='passed' stop='1599207428066'>
+                            <name>StepProperity: checkEnviroment </name>
+                            <title>StepProperity: checkEnviroment </title>
+                            <attachments/>
+                            <steps>
+                                <step start='1599207428060' status='passed' stop='1599207428066'>
+                                    <name>I grab text from "body > div > section > div > div.view-container > div > section.content-container > div > div > div.col-sm-7 > div > div > div:nth-child(6) > div > div.value"</name>
+                                    <title>I grab text from "body > div > section > div > div.view-container > div > section.content-container > div > div > div.col-sm-7 > div > div > div:nth-child(6) > div > div.value"</title>
+                                    <attachments/>
+                                    <steps/>
+                                </step>
+                            </steps>
+                        </step>
+                    </steps>
+                </step>
+                <step start='1599207428066' status='passed' stop='1599207428071'>
+                    <name>And Platform 확인 : 3 </name>
+                    <title>And Platform 확인 : 3 </title>
+                    <attachments/>
+                    <steps>
+                        <step start='1599207428066' status='passed' stop='1599207428071'>
+                            <name>StepProperity: checkPlatform </name>
+                            <title>StepProperity: checkPlatform </title>
+                            <attachments/>
+                            <steps>
+                                <step start='1599207428066' status='passed' stop='1599207428071'>
+                                    <name>I grab text from "body > div > section > div > div.view-container > div > section.content-container > div > div.row.form__containter > div.col-sm-7 > div > div > div:nth-child(7) > div > div.value"</name>
+                                    <title>I grab text from "body > div > section > div > div.view-container > div > section.content-container > div > div.row.form__containter > div.col-sm-7 > div > div > div:nth-child(7) > div > div.value"</title>
+                                    <attachments/>
+                                    <steps/>
+                                </step>
+                            </steps>
+                        </step>
+                    </steps>
+                </step>
+                <step start='1599207428071' status='passed' stop='1599207428078'>
+                    <name>And Currency 확인 : KRW </name>
+                    <title>And Currency 확인 : KRW </title>
+                    <attachments/>
+                    <steps>
+                        <step start='1599207428071' status='passed' stop='1599207428078'>
+                            <name>StepBudget: checkCurrency </name>
+                            <title>StepBudget: checkCurrency </title>
+                            <attachments/>
+                            <steps>
+                                <step start='1599207428071' status='passed' stop='1599207428078'>
+                                    <name>I grab text from "body > div > section > div > div.view-container > div > section.content-container > div > div.row.form__containter > div.col-sm-5 > div > div > div:nth-child(1) > div > div.value"</name>
+                                    <title>I grab text from "body > div > section > div > div.view-container > div > section.content-container > div > div.row.form__containter > div.col-sm-5 > div > div > div:nth-child(1) > div > div.value"</title>
+                                    <attachments/>
+                                    <steps/>
+                                </step>
+                            </steps>
+                        </step>
+                    </steps>
+                </step>
+                <step start='1599207428078' status='passed' stop='1599207428099'>
+                    <name>And Total Budget 확인 : 1000000, Daily Budget 확인 : 20, Unit Price 확인 : 20 </name>
+                    <title>And Total Budget 확인 : 1000000, Daily Budget 확인 : 20, Unit Price 확인 : 20 </title>
+                    <attachments/>
+                    <steps>
+                        <step start='1599207428078' status='passed' stop='1599207428089'>
+                            <name>StepBudget: checkTotalBudget </name>
+                            <title>StepBudget: checkTotalBudget </title>
+                            <attachments/>
+                            <steps>
+                                <step start='1599207428078' status='passed' stop='1599207428084'>
+                                    <name>I wait for element "body > div > section > div > div.view-container > div > section.content-container > div > div.row.form__containter > div.col-sm-5 > div > div > div:nth-child(2) > div > div.value.horizontal > span", 5</name>
+                                    <title>I wait for element "body > div > section > div > div.view-container > div > section.content-container > div > div.row.form__containter > div.col-sm-5 > div > div > div:nth-child(2) > div > div.value.horizontal > span", 5</title>
+                                    <attachments/>
+                                    <steps/>
+                                </step>
+                                <step start='1599207428084' status='passed' stop='1599207428089'>
+                                    <name>I grab text from "body > div > section > div > div.view-container > div > section.content-container > div > div.row.form__containter > div.col-sm-5 > div > div > div:nth-child(2) > div > div.value.horizontal > span"</name>
+                                    <title>I grab text from "body > div > section > div > div.view-container > div > section.content-container > div > div.row.form__containter > div.col-sm-5 > div > div > div:nth-child(2) > div > div.value.horizontal > span"</title>
+                                    <attachments/>
+                                    <steps/>
+                                </step>
+                            </steps>
+                        </step>
+                        <step start='1599207428089' status='passed' stop='1599207428094'>
+                            <name>StepBudget: checkDailyBudget </name>
+                            <title>StepBudget: checkDailyBudget </title>
+                            <attachments/>
+                            <steps>
+                                <step start='1599207428089' status='passed' stop='1599207428094'>
+                                    <name>I grab text from "body > div > section > div > div.view-container > div > section.content-container > div > div.row.form__containter > div.col-sm-5 > div > div > div:nth-child(3) > div > div.value.horizontal > span"</name>
+                                    <title>I grab text from "body > div > section > div > div.view-container > div > section.content-container > div > div.row.form__containter > div.col-sm-5 > div > div > div:nth-child(3) > div > div.value.horizontal > span"</title>
+                                    <attachments/>
+                                    <steps/>
+                                </step>
+                            </steps>
+                        </step>
+                        <step start='1599207428094' status='passed' stop='1599207428099'>
+                            <name>StepBudget: checkUnitPrice </name>
+                            <title>StepBudget: checkUnitPrice </title>
+                            <attachments/>
+                            <steps>
+                                <step start='1599207428094' status='passed' stop='1599207428098'>
+                                    <name>I grab text from "body > div > section > div > div.view-container > div > section.content-container > div > div.row.form__containter > div.col-sm-5 > div > div > div:nth-child(4) > div > div.value.horizontal > span"</name>
+                                    <title>I grab text from "body > div > section > div > div.view-container > div > section.content-container > div > div.row.form__containter > div.col-sm-5 > div > div > div:nth-child(4) > div > div.value.horizontal > span"</title>
+                                    <attachments/>
+                                    <steps/>
+                                </step>
+                            </steps>
+                        </step>
+                    </steps>
+                </step>
+            </steps>
+            <attachments/>
+        </test-case>
+    </test-cases>
+</ns2:test-suite>

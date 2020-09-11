@@ -1,5 +1,5 @@
 exports.config = {
-  output: './output',
+  //output: './output',
   helpers: {
     Puppeteer: {
       url: 'https://dashboard-stagingqa.buzzvil.com/',
@@ -24,9 +24,9 @@ exports.config = {
     TestLinkAsync:'./testlink/testlink.js'
   },
   mocha: {
-    "reporterOptions": {
-      "mochaFile": "output/result.xml"
-    }
+    // "reporterOptions": {
+    //   "mochaFile": "output/result.xml"
+    // }
   },
   bootstrap: null,
   teardown: null,
@@ -44,6 +44,7 @@ exports.config = {
       enabled: true
     },
     allure: {
+      "enabled": true
     }
   },
   
