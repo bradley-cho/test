@@ -17,11 +17,11 @@ let initialUrl = 'https://dashboard-stagingqa.buzzvil.com/campaign/direct_sales/
 
 // Scenario Outline: 로그인 기능 확인
 
-Given("{word}", async(CaseId)=>{
+Given("DA {word}", async(CaseId)=>{
   await console.log("라인아이템 생성 테스트::::::::::::" + CaseId)
 });
 
-Given(/Direct Sales 페이지로 이동/, async() => {
+When(/Direct Sales 페이지로 이동/, async() => {
   await console.log("Direct Sales 페이지로 이동")
   await I.amOnPage(initialUrl)
 

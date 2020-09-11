@@ -4,7 +4,7 @@ Feature: Lineitem Creation
   I want to be able to 오류 없이 라인 아이템을 생성
 
   Scenario Outline: 라인아이템 생성 확인 
-  Given <CaseId>
+  Given DA <CaseId>
    When Direct Sales 페이지로 이동
     And ID 입력
     And Password 입력
