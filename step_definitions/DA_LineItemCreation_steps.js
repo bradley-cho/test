@@ -22,7 +22,7 @@ Given("DA {word}", async(CaseId)=>{
 });
 
 When(/Direct Sales 페이지로 이동/, async() => {
-  await console.log("Direct Sales 페이지로 이동")
+  await console.log("Direct Sales 페이지로 이동하하하")
   await I.amOnPage(initialUrl)
 
 });

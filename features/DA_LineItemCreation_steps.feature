@@ -5,7 +5,7 @@ Feature: Lineitem Creation
 
   Scenario Outline: 라인아이템 생성 확인 
   Given DA <CaseId>
-   When Direct Sales 페이지로 이동
+   When Direct Sales 페이지로 이동하하하
     And ID 입력
     And Password 입력
     And 확인 버튼 클릭
